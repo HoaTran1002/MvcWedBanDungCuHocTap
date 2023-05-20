@@ -1,0 +1,585 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/obj/Debug/net7.0/scopedcss/projectbundle/MvcWedBanDungCuHocTap.bundle.scp.css",
+      "PackagePath": "staticwebassets/MvcWedBanDungCuHocTap.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/css/style.min.css",
+      "PackagePath": "staticwebassets/css/style.min.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/carousel-1.jpg",
+      "PackagePath": "staticwebassets/img/carousel-1.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/carousel-2.jpg",
+      "PackagePath": "staticwebassets/img/carousel-2.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cat-1.jpg",
+      "PackagePath": "staticwebassets/img/cat-1.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cat-2.jpg",
+      "PackagePath": "staticwebassets/img/cat-2.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cat-3.jpg",
+      "PackagePath": "staticwebassets/img/cat-3.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cat-4.jpg",
+      "PackagePath": "staticwebassets/img/cat-4.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cat-5.jpg",
+      "PackagePath": "staticwebassets/img/cat-5.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cat-6.jpg",
+      "PackagePath": "staticwebassets/img/cat-6.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/offer-1.png",
+      "PackagePath": "staticwebassets/img/offer-1.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/offer-2.png",
+      "PackagePath": "staticwebassets/img/offer-2.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/payments.png",
+      "PackagePath": "staticwebassets/img/payments.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-1.jpg",
+      "PackagePath": "staticwebassets/img/product-1.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-2.jpg",
+      "PackagePath": "staticwebassets/img/product-2.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-3.jpg",
+      "PackagePath": "staticwebassets/img/product-3.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-4.jpg",
+      "PackagePath": "staticwebassets/img/product-4.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-5.jpg",
+      "PackagePath": "staticwebassets/img/product-5.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-6.jpg",
+      "PackagePath": "staticwebassets/img/product-6.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-7.jpg",
+      "PackagePath": "staticwebassets/img/product-7.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/product-8.jpg",
+      "PackagePath": "staticwebassets/img/product-8.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/user.jpg",
+      "PackagePath": "staticwebassets/img/user.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-1.jpg",
+      "PackagePath": "staticwebassets/img/vendor-1.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-2.jpg",
+      "PackagePath": "staticwebassets/img/vendor-2.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-3.jpg",
+      "PackagePath": "staticwebassets/img/vendor-3.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-4.jpg",
+      "PackagePath": "staticwebassets/img/vendor-4.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-5.jpg",
+      "PackagePath": "staticwebassets/img/vendor-5.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-6.jpg",
+      "PackagePath": "staticwebassets/img/vendor-6.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-7.jpg",
+      "PackagePath": "staticwebassets/img/vendor-7.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/vendor-8.jpg",
+      "PackagePath": "staticwebassets/img/vendor-8.jpg"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/easing/easing.js",
+      "PackagePath": "staticwebassets/lib/easing/easing.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/easing/easing.min.js",
+      "PackagePath": "staticwebassets/lib/easing/easing.min.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/LICENSE",
+      "PackagePath": "staticwebassets/lib/owlcarousel"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/ajax-loader.gif",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/ajax-loader.gif"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.carousel.css",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.carousel.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.carousel.min.css",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.carousel.min.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.theme.default.css",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.theme.default.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.theme.default.min.css",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.theme.default.min.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.theme.green.css",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.theme.green.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.theme.green.min.css",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.theme.green.min.css"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/assets/owl.video.play.png",
+      "PackagePath": "staticwebassets/lib/owlcarousel/assets/owl.video.play.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/owl.carousel.js",
+      "PackagePath": "staticwebassets/lib/owlcarousel/owl.carousel.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/lib/owlcarousel/owl.carousel.min.js",
+      "PackagePath": "staticwebassets/lib/owlcarousel/owl.carousel.min.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/mail/contact.js",
+      "PackagePath": "staticwebassets/mail/contact.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/mail/contact.php",
+      "PackagePath": "staticwebassets/mail/contact.php"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/mail/jqBootstrapValidation.min.js",
+      "PackagePath": "staticwebassets/mail/jqBootstrapValidation.min.js"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_alert.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_alert.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_badge.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_badge.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_breadcrumb.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_breadcrumb.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_button-group.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_button-group.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_buttons.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_buttons.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_card.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_card.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_carousel.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_carousel.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_close.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_close.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_code.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_code.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_custom-forms.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_custom-forms.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_dropdown.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_dropdown.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_forms.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_forms.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_functions.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_functions.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_grid.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_grid.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_images.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_images.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_input-group.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_input-group.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_jumbotron.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_jumbotron.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_list-group.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_list-group.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_media.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_media.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_mixins.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_mixins.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_modal.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_modal.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_nav.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_nav.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_navbar.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_navbar.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_pagination.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_pagination.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_popover.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_popover.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_print.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_print.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_progress.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_progress.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_reboot.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_reboot.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_root.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_root.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_spinners.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_spinners.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_tables.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_tables.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_toasts.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_toasts.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_tooltip.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_tooltip.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_transitions.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_transitions.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_type.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_type.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_utilities.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_utilities.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/_variables.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/_variables.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/bootstrap-grid.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/bootstrap-grid.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/bootstrap-reboot.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/bootstrap.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/bootstrap.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_alert.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_alert.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_background-variant.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_background-variant.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_badge.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_badge.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_border-radius.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_border-radius.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_box-shadow.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_box-shadow.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_breakpoints.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_breakpoints.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_buttons.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_buttons.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_caret.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_caret.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_clearfix.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_clearfix.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_deprecate.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_deprecate.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_float.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_float.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_forms.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_forms.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_gradients.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_gradients.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_grid-framework.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_grid-framework.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_grid.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_grid.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_hover.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_hover.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_image.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_image.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_list-group.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_list-group.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_lists.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_lists.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_nav-divider.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_nav-divider.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_pagination.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_pagination.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_reset-text.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_reset-text.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_resize.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_resize.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_screen-reader.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_screen-reader.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_size.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_size.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_table-row.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_table-row.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_text-emphasis.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_text-emphasis.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_text-hide.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_text-hide.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_text-truncate.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_text-truncate.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_transition.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_transition.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/mixins/_visibility.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/mixins/_visibility.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_align.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_align.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_background.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_background.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_borders.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_borders.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_clearfix.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_clearfix.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_display.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_display.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_embed.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_embed.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_flex.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_flex.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_float.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_float.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_interactions.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_interactions.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_overflow.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_overflow.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_position.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_position.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_screenreaders.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_screenreaders.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_shadows.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_shadows.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_sizing.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_sizing.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_spacing.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_spacing.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_stretched-link.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_stretched-link.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_text.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_text.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/utilities/_visibility.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/utilities/_visibility.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/bootstrap/scss/vendor/_rfs.scss",
+      "PackagePath": "staticwebassets/scss/bootstrap/scss/vendor/_rfs.scss"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/scss/style.scss",
+      "PackagePath": "staticwebassets/scss/style.scss"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.MvcWedBanDungCuHocTap.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.MvcWedBanDungCuHocTap.props",
+      "PackagePath": "build\\MvcWedBanDungCuHocTap.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MvcWedBanDungCuHocTap.props",
+      "PackagePath": "buildMultiTargeting\\MvcWedBanDungCuHocTap.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MvcWedBanDungCuHocTap.props",
+      "PackagePath": "buildTransitive\\MvcWedBanDungCuHocTap.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
