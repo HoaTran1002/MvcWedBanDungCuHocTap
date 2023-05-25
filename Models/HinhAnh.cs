@@ -8,6 +8,7 @@ namespace MvcWedBanDungCuHocTap.Models
         public int Id { get; set; }
         [ForeignKey("SanPham")]
         public int IdSP { get; set; }
-        public string? HinhAnhSP { get; set; }
+        [NotMapped]
+        public IFormFile? HinhAnhSP { get; set; }
     }
 }

@@ -17,7 +17,8 @@ namespace MvcWedBanDungCuHocTap.Models
         public int SoLuongTon { get; set; }
         public decimal? GiaNhap { get; set; }
         public decimal? GiaBan { get; set; }
-        public DateTime NgayNhap { get; set; }
-        public DateTime NgayBan { get; set; }
+
+        [ForeignKey("DanhMucSanPham")]
+        public int? IdDanhMucSanPham { get; set; }
     }
 }

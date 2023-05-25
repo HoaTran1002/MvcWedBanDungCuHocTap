@@ -22,7 +22,7 @@ namespace MvcWedBanDungCuHocTap.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.DanhMucSanPham", b =>
+            modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.ChiTietSanPham", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,14 +30,30 @@ namespace MvcWedBanDungCuHocTap.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("IdLop")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdSP")
                         .HasColumnType("int");
 
-                    b.Property<string>("MoTaDM")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("SoLuongLoaiSP")
+                    b.Property<int>("IdTheLoai")
                         .HasColumnType("int");
+
+                    b.Property<int>("IdThuongHieu")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ChiTietSanPhams");
+                });
+
+            modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.DanhMucSanPham", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("TenDM")
                         .HasColumnType("nvarchar(max)");
@@ -55,15 +71,28 @@ namespace MvcWedBanDungCuHocTap.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("HinhAnhSP")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("IdSP")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.ToTable("HinhAnhs");
+                });
+
+            modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.Lop", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("DoiTuongSP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Lops");
                 });
 
             modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.SanPham", b =>
@@ -80,19 +109,22 @@ namespace MvcWedBanDungCuHocTap.Migrations
                     b.Property<decimal?>("GiaNhap")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int?>("IdDanhMucSanPham")
+                        .HasColumnType("int");
+
                     b.Property<string>("MaSP")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MoTaSP")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SoLuong")
+                    b.Property<int>("SoLuongNhap")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoLuongTon")
                         .HasColumnType("int");
 
                     b.Property<string>("TenSP")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ThuongHieu")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("XuatSu")
@@ -101,6 +133,38 @@ namespace MvcWedBanDungCuHocTap.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SanPhams");
+                });
+
+            modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.TheLoai", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("TenTheLoai")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TheLoais");
+                });
+
+            modelBuilder.Entity("MvcWedBanDungCuHocTap.Models.ThuongHieu", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("TenThuongHieuSP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThuongHieus");
                 });
 #pragma warning restore 612, 618
         }

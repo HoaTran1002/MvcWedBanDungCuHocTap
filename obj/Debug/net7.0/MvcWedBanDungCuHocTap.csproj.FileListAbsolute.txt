@@ -604,3 +604,4 @@
 /Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/obj/Debug/net7.0/MvcWedBanDungCuHocTap.pdb
 /Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/obj/Debug/net7.0/MvcWedBanDungCuHocTap.genruntimeconfig.cache
 /Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/obj/Debug/net7.0/ref/MvcWedBanDungCuHocTap.dll
+/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/obj/Debug/net7.0/scopedcss/Areas/Admin/Views/Shared/_Layout.cshtml.rz.scp.css
