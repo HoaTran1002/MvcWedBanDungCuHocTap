@@ -25,8 +25,6 @@ public class SanPhamController : Controller
 
         return View();
     }
-
-
     public IActionResult ThemSanPham()
     {
         ViewBag.ListThuongHieu = _context.ThuongHieus.ToList<ThuongHieu>();

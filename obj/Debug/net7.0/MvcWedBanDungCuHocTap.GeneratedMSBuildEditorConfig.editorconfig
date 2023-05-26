@@ -9,77 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcWedBanDungCuHocTap
 build_property.RootNamespace = MvcWedBanDungCuHocTap
-build_property.ProjectDir = /Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/
+build_property.ProjectDir = C:\WorkSpace\_github\MvcWedBanDungCuHocTap\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/hoatran/Documents/study/MvcWedBanDungCuHocTap
+build_property.MSBuildProjectDirectory = C:\WorkSpace\_github\MvcWedBanDungCuHocTap
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/DashBoard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRGFzaEJvYXJkL0luZGV4LmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/DashBoard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaEJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/DanhSachSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2FuUGhhbS9EYW5oU2FjaFNhblBoYW0uY3NodG1s
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9wXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/ThemSanPham.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2FuUGhhbS9UaGVtU2FuUGhhbS5jc2h0bWw=
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9wXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9wXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9wXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DYXJ0LmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/DanhSachSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxEYW5oU2FjaFNhblBoYW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Checkout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DaGVja291dC5jc2h0bWw=
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/ThemSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxUaGVtU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Contact.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0LmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EZXRhaWwuY3NodG1s
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Home/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Shop.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TaG9wLmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Home/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja291dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Home/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Home/Shop.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-e799wo500v
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-ce9wqnzqfx
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ds50t2cars
+
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2ii8nhtzxz

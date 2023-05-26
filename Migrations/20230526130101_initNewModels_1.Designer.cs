@@ -12,8 +12,8 @@ using MvcWedBanDungCuHocTap.Models;
 namespace MvcWedBanDungCuHocTap.Migrations
 {
     [DbContext(typeof(DbApplicationContext))]
-    [Migration("20230524001939_initNewModels")]
-    partial class initNewModels
+    [Migration("20230526130101_initNewModels_1")]
+    partial class initNewModels_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
