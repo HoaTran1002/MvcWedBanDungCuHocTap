@@ -1,0 +1,42 @@
+@{
+  Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<MvcWedBanDungCuHocTap.Models.ThuongHieu>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Thương hiệu sản phẩm</h2>
+        </div>
+        <div class="col-lg-6">
+            <a href="/Admin/ThuongHieu/Create" class="btn border-primary text-white bg-primary mt-4"><i class="bi bi-plus-circle"></i>Thêm Mới</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên thương hiệu sản phẩm</th>
+                    <th scope="col">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ThuongHieu in Model)
+                    {
+                        <tr>
+                            <td>@ThuongHieu.Id</td>
+                            <td>@ThuongHieu.TenThuongHieuSP</td>
+                            <td>
+                                <a href="/Admin/ThuongHieu/Details/@ThuongHieu.Id">Xem</a> |
+                                <a href="/Admin/ThuongHieu/Edit/@ThuongHieu.Id">Sửa</a> |
+                                <a href="/Admin/ThuongHieu/Delete/@ThuongHieu.Id">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                </table>   
+        </div>
+    </div>
+</div>

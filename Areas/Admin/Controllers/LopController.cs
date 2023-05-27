@@ -119,5 +119,32 @@ public class LopController : Controller{
         return View(updatedLop);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var lop = await _context.Lops.FindAsync(id);
+        if (lop == null)
+        {
+            return NotFound();
+        }
+
+        return View(lop);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        var lop = await _context.Lops.FindAsync(id);
+        if (lop == null)
+        {
+            return NotFound();
+        }
+
+        _context.Lops.Remove(lop);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index", "Lop");
+    }
+
 
 }

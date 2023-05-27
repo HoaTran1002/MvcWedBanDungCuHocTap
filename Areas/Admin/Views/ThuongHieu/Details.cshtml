@@ -1,7 +1,7 @@
 @{
   Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-@model MvcWedBanDungCuHocTap.Models.Lop
+@model MvcWedBanDungCuHocTap.Models.ThuongHieu
 <style>
     .my-form-class{
         width: 100%;
@@ -9,17 +9,17 @@
 </style>
 <div class="container-fluid">
     <div class="row">
-        <h2>Thông tin mục lớp</h2>
+        <h2>Thông tin thương hiệu sản phẩm</h2>
     </div>
     <div class="row">
         <div class="col-lg-6">
             <span>Id : @Model.Id</span>
         </div>
         <div class="col-lg-6">
-            <span>Tên mục lớp : @Model.DoiTuongSP</span>
+            <span>Tên thương hiệu : @Model.TenThuongHieuSP</span>
         </div>
         <div class="col-lg-6">
-            <a class="btn btn-primary" href="/Admin/Lop/Index">Trở về</a>
+            <a class="btn btn-primary" href="/Admin/ThuongHieu/Index">Trở về</a>
         </div>
     </div>
 </div>

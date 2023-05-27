@@ -9,17 +9,20 @@
 </style>
 <div class="container-fluid">
     <div class="row">
-        <h2>Thông tin mục lớp</h2>
+        <h2>Bạn có chắc muốn xóa mục lớp này</h2>
     </div>
     <div class="row">
         <div class="col-lg-6">
             <span>Id : @Model.Id</span>
         </div>
         <div class="col-lg-6">
-            <span>Tên mục lớp : @Model.DoiTuongSP</span>
+            <span>Tên mục lớp: @Model.DoiTuongSP</span>
         </div>
         <div class="col-lg-6">
-            <a class="btn btn-primary" href="/Admin/Lop/Index">Trở về</a>
+            <form action="/Admin/Lop/DeleteConfirmed/@Model.Id" method="post">
+                <button type="submit" class="btn btn-danger">Xóa</button>
+                <a href="/Admin/Lop/Index" class="btn btn-secondary">Hủy</a>
+            </form>
         </div>
     </div>
 </div>
