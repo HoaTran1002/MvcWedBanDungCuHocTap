@@ -18645,13 +18645,38 @@
   "RootNamespace": "MvcWedBanDungCuHocTap",
   "Documents": [
     {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/TheLoai/Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\TheLoai\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Shared/_Layout.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Lop\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/TheLoai/Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\TheLoai\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/ThuongHieu/Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ThuongHieu\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/ThuongHieu/Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ThuongHieu\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18662,6 +18687,36 @@
     {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/DanhSachSanPham.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\SanPham\\DanhSachSanPham.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/DanhMuc/Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DanhMuc\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/DanhMuc/Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DanhMuc\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/TheLoai/Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\TheLoai\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/DanhMuc/Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DanhMuc\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/ThuongHieu/Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ThuongHieu\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/DanhMuc/Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DanhMuc\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18680,6 +18735,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Lop\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Contact.cshtml",
       "TargetPath": "Views\\Home\\Contact.cshtml",
       "FileKind": "mvc"
@@ -18687,6 +18747,11 @@
     {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Detail.cshtml",
       "TargetPath": "Views\\Home\\Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Lop\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18705,8 +18770,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/TheLoai/Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\TheLoai\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/TheLoai/Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\TheLoai\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Lop\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Views/Home/Cart.cshtml",
       "TargetPath": "Views\\Home\\Cart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/DanhMuc/Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\DanhMuc\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/ThuongHieu/Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ThuongHieu\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/Lop/Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Lop\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18727,6 +18822,11 @@
     {
       "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/ThemSanPham.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\SanPham\\ThemSanPham.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/Areas/Admin/Views/ThuongHieu/Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\ThuongHieu\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],

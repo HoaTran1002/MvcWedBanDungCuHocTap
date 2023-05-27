@@ -1,0 +1,26 @@
+@{
+  Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model MvcWedBanDungCuHocTap.Models.DanhMucSanPham
+<style>
+    .my-form-class{
+        width: 100%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <h2>Chỉnh sửa danh mục sản phẩm</h2>
+    </div>
+    <div class="row">
+        
+    <form class="shadow-lg p-3 mb-5 bg-white rounded" action="/Admin/DanhMuc/Edit/@Model.Id" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="Id" value="@Model.Id">
+
+        <div class="form-group md-3 col-lg-6">
+            <label class="text-dark" for="exampleInputTenLop">Tên Danh Mục</label>
+            <input name="TenDM" type="text" class="form-control" id="exampleInputTenLop" aria-describedby="emailHelp" value="@Model.TenDM">
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+    </form>
+    </div>
+</div>
