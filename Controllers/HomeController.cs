@@ -1,9 +1,12 @@
 ﻿using System.Diagnostics;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MvcWedBanDungCuHocTap.Models;
 using MvcWedBanSach.Models;
 
 namespace MvcWedBanSach.Controllers;
+
 
 public class HomeController : Controller
 {
@@ -23,12 +26,13 @@ public class HomeController : Controller
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         return View();
     }
-
+    [Authorize]
     public IActionResult Cart()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         return View();
     }
+    [Authorize]
     public IActionResult Checkout()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
@@ -47,6 +51,7 @@ public class HomeController : Controller
     public IActionResult Shop()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+
         return View();
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

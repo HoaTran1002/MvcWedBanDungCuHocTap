@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 
 namespace MvcWedBanDungCuHocTap.Models
 {
-    public class DbApplicationContext : DbContext
+    public class DbApplicationContext : IdentityDbContext<ApplicationUser>
     {
         public DbApplicationContext(DbContextOptions options) : base(options) { }
 

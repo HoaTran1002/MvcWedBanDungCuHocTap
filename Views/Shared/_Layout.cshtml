@@ -47,21 +47,8 @@
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-dark px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-dark pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+                   
+                   
                 </div>
             </div>
         </div>
@@ -120,15 +107,7 @@
                                 <a href="" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
-                        <a href="" class="nav-item nav-link">Shirts</a>
-                        <a href="" class="nav-item nav-link">Jeans</a>
-                        <a href="" class="nav-item nav-link">Swimwear</a>
-                        <a href="" class="nav-item nav-link">Sleepwear</a>
-                        <a href="" class="nav-item nav-link">Sportswear</a>
-                        <a href="" class="nav-item nav-link">Jumpsuits</a>
-                        <a href="" class="nav-item nav-link">Blazers</a>
-                        <a href="" class="nav-item nav-link">Jackets</a>
-                        <a href="" class="nav-item nav-link">Shoes</a>
+                       
                     </div>
                 </nav>
             </div>
@@ -154,20 +133,27 @@
                             </div>
                             <a asp-controller="Home" asp-action="Contact" class="nav-item nav-link">Contact</a>
                         </div>
-                        <div class="navbar-nav ml-auto py-0">
-                            <a asp-controller="Home" asp-action="#" class="nav-item nav-link">Login</a>
-                            <a asp-controller="Home" asp-action="#" class="nav-item nav-link">Register</a>
-                        </div>
+                        @if (!string.IsNullOrEmpty(User.Identity.Name))
+                        {
+                            <div class="navbar-nav ml-auto py-0">
+                                    <a asp-controller="UserAuthentication" asp-action="ChangePassword" class="nav-item nav-link">Change Password</a>
+                                    <a asp-controller="UserAuthentication" asp-action="Logout" class="nav-item nav-link">Logout</a>
+                                </div>
+                        }else{
+
+                                <div class="navbar-nav ml-auto py-0">
+                                    <a asp-controller="UserAuthentication" asp-action="Login" class="nav-item nav-link">Login</a>
+                                    <a asp-controller="UserAuthentication" asp-action="Registration" class="nav-item nav-link">Register</a>
+                                </div>
+                        }
                     </div>
                 </nav>
             </div>
         </div>
     </div>
     <!-- Navbar End -->
-
-
     <!-- Page Header Start -->
-    <div class="container-fluid bg-secondary mb-5">
+    @* <div class="container-fluid bg-secondary mb-5">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
             <h1 class="font-weight-semi-bold text-uppercase mb-3">Our Shop</h1>
             <div class="d-inline-flex">
@@ -176,7 +162,7 @@
                 <p class="m-0">Shop</p>
             </div>
         </div>
-    </div>
+    </div> *@
     <!-- Page Header End -->
 
 

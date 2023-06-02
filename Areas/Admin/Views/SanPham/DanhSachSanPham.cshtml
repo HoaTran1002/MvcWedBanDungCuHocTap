@@ -1,7 +1,7 @@
 @{
     Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+    int id = 1;
 }
-
 <div>
  
     <div class="container">
@@ -11,7 +11,7 @@
                 <table class="table table-image">
                 <thead>
                     <tr>
-                    <th scope="col">STT</th>
+                    <th scope="col">ID</th>
                     <th scope="col">Hình Ảnh</th>
                     <th scope="col">Tên Sản Phẩm</th>
                     <th scope="col">Thực Hiện</th>
@@ -20,29 +20,76 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <a href="#">
+                    @foreach (var item in ViewBag.ListSp)
+                    {
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">@item.SanPham.Id</th>
                             <td class="w-25">
-                                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
+                                <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
                             </td>
-                            <td>Bootstrap 4 CDN and Starter Template</td>
+                            <td>@item.SanPham.TenSP</td>
                             <td>
-                                <a class=" icon-link-hover"  href="#" style="font-size: 20px; margin:10px;">
-                                <i class="text-danger bi bi-trash"></i>
+                                <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
+                                    <i class="text-danger bi bi-trash"></i>
                                 </a>
-                                <a class=" icon-link-hover"  href="#" style="font-size: 20px; margin:10px;">
+                                <a class="icon-link-hover" href="#" onclick="submitFormEdit()" style="font-size: 20px; margin:10px;">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
-                            <td>2.000.000</td>
-                            <td>1.434</td>
-                        
+                                <a class="icon-link-hover" href="#" onclick="submitFormDetail()" style="font-size: 20px; margin:10px;">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                            </td>
+                            <td>@item.SanPham.GiaBan</td>
+                            <td>@item.SanPham.SoLuongNhap</td>
+                             @* tạo form ẩn *@
+                            <form id="myForm" method="POST" action="XoaSanPham">
+                                <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                            </form>  
+                            <form id="myFormEdit" method="Get" action="SuaSanPham">
+                                <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                            </form>  
+                            <form id="myFormDetail" method="POST" action="XemChiTiet">
+                                <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                            </form>  
                         </tr>
-                    </a>
+                    }
+
                 </tbody>
-                </table>   
+                </table> 
+               
             </div>
         </div>
-    </div>
-    
+    </div>    
+    <script>
+    function submitForm() {
+        // Lấy giá trị của Id từ phần tử input ẩn
+        var id = document.getElementById('IdInput').value;
+
+        // Gán giá trị của Id vào input trong form
+        document.getElementById('IdInput').value = id;
+
+        // Submit form
+        document.getElementById('myForm').submit();
+    }
+    function submitFormEdit() {
+        // Lấy giá trị của Id từ phần tử input ẩn
+        var id = document.getElementById('IdInput').value;
+
+        // Gán giá trị của Id vào input trong form
+        document.getElementById('IdInput').value = id;
+
+        // Submit form
+        document.getElementById('myFormEdit').submit();
+    }
+    function submitFormDetail() {
+        // Lấy giá trị của Id từ phần tử input ẩn
+        var id = document.getElementById('IdInput').value;
+
+        // Gán giá trị của Id vào input trong form
+        document.getElementById('IdInput').value = id;
+
+        // Submit form
+        document.getElementById('myFormDetail').submit();
+    }
+</script>
 </div>

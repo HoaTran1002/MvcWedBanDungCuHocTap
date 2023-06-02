@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/MvcWedBanDungCuHocTap.bundle.scp.css"
     },
     {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/css/maps/horizontal-layout-dark/style.css.map",
       "PackagePath": "staticwebassets/css/maps/horizontal-layout-dark/style.css.map"
     },
@@ -357,6 +361,10 @@
       "PackagePath": "staticwebassets/fonts/Roboto/Roboto-Regular.woff2"
     },
     {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/.DS_Store",
+      "PackagePath": "staticwebassets/img/.DS_Store"
+    },
+    {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/auth/lockscreen-bg.jpg",
       "PackagePath": "staticwebassets/img/auth/lockscreen-bg.jpg"
     },
@@ -401,72 +409,8 @@
       "PackagePath": "staticwebassets/img/cat-6.jpg"
     },
     {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cd_sgk_amnhac_lop_1231511585.jpg",
-      "PackagePath": "staticwebassets/img/cd_sgk_amnhac_lop_1231511585.jpg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cd_sgk_amnhac_lop_1232257504.jpg",
-      "PackagePath": "staticwebassets/img/cd_sgk_amnhac_lop_1232257504.jpg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cd_sgk_amnhac_lop_1232657794.jpg",
-      "PackagePath": "staticwebassets/img/cd_sgk_amnhac_lop_1232657794.jpg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cd_sgk_amnhac_lop_1234350633.jpg",
-      "PackagePath": "staticwebassets/img/cd_sgk_amnhac_lop_1234350633.jpg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry232310271.jpeg",
-      "PackagePath": "staticwebassets/img/cherry232310271.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry233443887.jpeg",
-      "PackagePath": "staticwebassets/img/cherry233443887.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry233721306.jpeg",
-      "PackagePath": "staticwebassets/img/cherry233721306.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234018733.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234018733.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234116919.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234116919.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234240807.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234240807.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234303032.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234303032.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234334084.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234334084.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234511514.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234511514.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234819844.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234819844.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry234834521.jpeg",
-      "PackagePath": "staticwebassets/img/cherry234834521.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry235400367.jpeg",
-      "PackagePath": "staticwebassets/img/cherry235400367.jpeg"
-    },
-    {
-      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry235502526.jpeg",
-      "PackagePath": "staticwebassets/img/cherry235502526.jpeg"
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/commons-collections4-4.1231423843.jar",
+      "PackagePath": "staticwebassets/img/commons-collections4-4.1231423843.jar"
     },
     {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/dashboard/banner_bg.jpg",
@@ -747,6 +691,82 @@
     {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/file-icons/64/008-archive.png",
       "PackagePath": "staticwebassets/img/file-icons/64/008-archive.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_amnhac_lop_1230507145.png",
+      "PackagePath": "staticwebassets/img/kntt_sgk_amnhac_lop_1230507145.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_amnhac_lop_1230509392.png",
+      "PackagePath": "staticwebassets/img/kntt_sgk_amnhac_lop_1230509392.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_amnhac_lop_1230511378.png",
+      "PackagePath": "staticwebassets/img/kntt_sgk_amnhac_lop_1230511378.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_amnhac_lop_1230518221.png",
+      "PackagePath": "staticwebassets/img/kntt_sgk_amnhac_lop_1230518221.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_amnhac_lop_1235831913.png",
+      "PackagePath": "staticwebassets/img/kntt_sgk_amnhac_lop_1235831913.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230311480.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230311480.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230822870.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230822870.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230824924.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230824924.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230827744.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230827744.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230830878.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230830878.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230834914.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230834914.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230837090.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230837090.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230839180.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230839180.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230842068.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230842068.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230845033.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230845033.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230847314.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230847314.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3230854050.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3230854050.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3231439307.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3231439307.JPG"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/kntt_sgk_gdtc_lop_3231954927.JPG",
+      "PackagePath": "staticwebassets/img/kntt_sgk_gdtc_lop_3231954927.JPG"
     },
     {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/lightbox/play-button.png",
