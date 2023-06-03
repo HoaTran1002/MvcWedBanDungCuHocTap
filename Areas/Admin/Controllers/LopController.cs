@@ -10,7 +10,8 @@ using System.ComponentModel.DataAnnotations;
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 
 [Area("Admin")]
-public class LopController : Controller{
+public class LopController : Controller
+{
     private readonly ILogger<LopController> _logger;
     private readonly IWebHostEnvironment _hostEnvironment;
     private readonly DbApplicationContext _context;
@@ -34,7 +35,7 @@ public class LopController : Controller{
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostCreate( string TenLop)
+    public async Task<IActionResult> PostCreate(string TenLop)
     {
         try
         {
@@ -73,7 +74,7 @@ public class LopController : Controller{
         return View(lop);
     }
 
-   [HttpGet]
+    [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {
         var lop = await _context.Lops.FindAsync(id);

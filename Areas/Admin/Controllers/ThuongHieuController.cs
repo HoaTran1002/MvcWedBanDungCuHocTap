@@ -10,7 +10,8 @@ using System.ComponentModel.DataAnnotations;
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 
 [Area("Admin")]
-public class ThuongHieuController : Controller{
+public class ThuongHieuController : Controller
+{
     private readonly ILogger<ThuongHieuController> _logger;
     private readonly IWebHostEnvironment _hostEnvironment;
     private readonly DbApplicationContext _context;
@@ -34,7 +35,7 @@ public class ThuongHieuController : Controller{
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostCreate( string TenThuongHieu)
+    public async Task<IActionResult> PostCreate(string TenThuongHieu)
     {
         try
         {
@@ -65,7 +66,7 @@ public class ThuongHieuController : Controller{
         }
 
         var thuonghieu = await _context.ThuongHieus.FindAsync(id);
-        if (thuonghieu== null)
+        if (thuonghieu == null)
         {
             return NotFound();
         }
@@ -73,7 +74,7 @@ public class ThuongHieuController : Controller{
         return View(thuonghieu);
     }
 
-   [HttpGet]
+    [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {
         var thuonghieu = await _context.ThuongHieus.FindAsync(id);

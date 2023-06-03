@@ -4,8 +4,8 @@ using MvcWedBanDungCuHocTap.Models;
 using MvcWedBanSach.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
-
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 [Area("Admin")]
@@ -15,17 +15,35 @@ public class SanPhamController : Controller
     private readonly IWebHostEnvironment _hostEnvironment;
     private readonly DbApplicationContext _context;
 
+
     public SanPhamController(ILogger<SanPhamController> logger, IWebHostEnvironment hostEnvironment, DbApplicationContext context)
     {
         _logger = logger;
         _hostEnvironment = hostEnvironment;
         _context = context;
     }
+    [HttpGet]
     public IActionResult DanhSachSanPham()
     {
-        var list = _context.SanPhams.ToList();
-        return View(list);
+        var query = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b }).ToList();
+        ViewBag.ListSp = query;
+        return View(query);
     }
+    [HttpGet]
+    public IActionResult XemChiTiet()
+    {
+
+        return View();
+    }
+    [HttpGet("/Admin/SanPham/SuaSanPham/{Id}")]
+    public async Task<IActionResult> SuaSanPham([FromRoute] int Id)
+    {
+        // Sử dụng ID để thực hiện các xử lý khác, ví dụ:
+        return View();
+    }
+    [HttpGet]
     public IActionResult ThemSanPham()
     {
         ViewBag.ListThuongHieu = _context.ThuongHieus.ToList<ThuongHieu>();
@@ -59,19 +77,11 @@ public class SanPhamController : Controller
     [Range(0, int.MaxValue, ErrorMessage = "Thương hiệu không hợp lệ")] int ThuongHieuSp,
     [Range(0, int.MaxValue, ErrorMessage = "Lớp sản phẩm không hợp lệ")] int LopSP,
     [Range(0, int.MaxValue, ErrorMessage = "Danh mục không hợp lệ")] int IdDanhMuc,
-    HinhAnh hinhanh)
+    IFormFile hinhanh)
     {
         try
         {
-            string wwwRootPath = _hostEnvironment.WebRootPath;
-            string fileName = Path.GetFileNameWithoutExtension(hinhanh.HinhAnhSP.FileName);
-            string extension = Path.GetExtension(hinhanh.HinhAnhSP.FileName);
-            fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-            string path = Path.Combine(wwwRootPath + "/img/", fileName);
-            using (var fileStream = new FileStream(path, FileMode.Create))
-            {
-                await hinhanh.HinhAnhSP.CopyToAsync(fileStream);
-            }
+
             SanPham sanpham = new SanPham();
             sanpham.MaSP = MaSP;
             sanpham.TenSP = TenSP;
@@ -81,15 +91,29 @@ public class SanPhamController : Controller
             sanpham.SoLuongTon = SoLuongTon;
             sanpham.GiaNhap = GiaNhapSP;
             sanpham.GiaBan = GiaBanSP;
-
             sanpham.IdDanhMucSanPham = IdDanhMuc;
             await _context.SanPhams.AddAsync(sanpham);
             await _context.SaveChangesAsync();
 
-            hinhanh.IdSP = sanpham.Id;
-            // Insert records
-            await _context.HinhAnhs.AddAsync(hinhanh);
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+            string fileName = Path.GetFileNameWithoutExtension(hinhanh.FileName);
+
+            string extension = Path.GetExtension(hinhanh.FileName);
+            fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+            string path = Path.Combine(wwwRootPath + "/img/", fileName);
+            string stringUrl = Path.Combine("img/", fileName);
+
+            using (var fileStream = new FileStream(path, FileMode.Create))
+            {
+                await hinhanh.CopyToAsync(fileStream);
+            }
+            HinhAnh hinhanhsp = new HinhAnh();
+            hinhanhsp.IdSP = sanpham.Id;
+            hinhanhsp.HinhAnhSP = stringUrl;
+
+            await _context.HinhAnhs.AddAsync(hinhanhsp);
             await _context.SaveChangesAsync();
+
             ChiTietSanPham ctsp = new ChiTietSanPham();
             ctsp.IdThuongHieu = ThuongHieuSp;
             ctsp.IdTheLoai = TheLoaiSP;
@@ -102,13 +126,41 @@ public class SanPhamController : Controller
         }
         catch (System.Exception)
         {
-
             throw;
-            return BadRequest(403);
         }
         // Trả về view với thông báo lỗi và giữ lại các giá trị đã nhập
+        return BadRequest(403);
+    }
+    [HttpPost]
+    public async Task<IActionResult> XoaSanPham(int Id)
+    {
+        try
+        {
 
-        return RedirectToAction("DanhSachSanPham", "SanPham");
+            //xoá sản phẩm 
+            var SanPhamRemove = _context.SanPhams.SingleOrDefault(sp => sp.Id == Id);
+            if (SanPhamRemove != null)
+            {
+                _context.SanPhams.Remove(SanPhamRemove);
+                _context.SaveChangesAsync();
+            }
+            //xoá hình ảnh
+            HinhAnh anhD = _context.HinhAnhs.First(ha => ha.IdSP == Id);
+            _context.HinhAnhs.Where(ha => ha.IdSP == Id).ExecuteDelete();
+            _context.SaveChangesAsync();
+
+
+
+            //xoá hình ảnh sản phẩm
+            await _context.SaveChangesAsync();
+            return RedirectToAction("DanhSachSanPham", "SanPham");
+        }
+        catch (System.Exception)
+        {
+            throw;
+        }
+        // Trả về view với thông báo lỗi và giữ lại các giá trị đã nhập
+        return BadRequest(403);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

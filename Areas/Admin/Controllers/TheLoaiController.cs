@@ -10,7 +10,8 @@ using System.ComponentModel.DataAnnotations;
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 
 [Area("Admin")]
-public class TheLoaiController : Controller{
+public class TheLoaiController : Controller
+{
     private readonly ILogger<TheLoaiController> _logger;
     private readonly IWebHostEnvironment _hostEnvironment;
     private readonly DbApplicationContext _context;
@@ -34,7 +35,7 @@ public class TheLoaiController : Controller{
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostCreate( string TenTheLoai)
+    public async Task<IActionResult> PostCreate(string TenTheLoai)
     {
         try
         {
@@ -65,7 +66,7 @@ public class TheLoaiController : Controller{
         }
 
         var TheLoais = await _context.TheLoais.FindAsync(id);
-        if (TheLoais== null)
+        if (TheLoais == null)
         {
             return NotFound();
         }
@@ -73,7 +74,7 @@ public class TheLoaiController : Controller{
         return View(TheLoais);
     }
 
-   [HttpGet]
+    [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {
         var TheLoais = await _context.TheLoais.FindAsync(id);
