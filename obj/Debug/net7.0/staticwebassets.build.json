@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hHU4xMoJUjJQbXU/XDQIzhArpykQ+K6Kv17plWIGVlg=",
+  "Hash": "B8eCXDN3XJitsARuvLGLdSV3S5cLBROoKyvVuQWi4us=",
   "Source": "MvcWedBanDungCuHocTap",
   "BasePath": "_content/MvcWedBanDungCuHocTap",
   "Mode": "Default",
@@ -1598,6 +1598,23 @@
       "OriginalItemSpec": "wwwroot\\img\\auth\\register-bg.jpg"
     },
     {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\bronze-removebg-preview235517941.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/bronze-removebg-preview235517941.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\bronze-removebg-preview235517941.png"
+    },
+    {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\carousel-1.jpg",
       "SourceId": "MvcWedBanDungCuHocTap",
       "SourceType": "Discovered",
@@ -3160,6 +3177,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\file-icons\\64\\008-archive.png"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\kk-removebg-preview235829823.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/kk-removebg-preview235829823.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\kk-removebg-preview235829823.png"
     },
     {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\lightbox\\play-button.png",

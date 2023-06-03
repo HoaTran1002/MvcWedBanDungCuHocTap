@@ -1,45 +1,45 @@
 @{
     Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
+@model IEnumerable<MvcWedBanDungCuHocTap.Models.SanPham>
 <div>
- 
     <div class="container">
         <a href="/Admin/SanPham/ThemSanPham" class="btn border-primary text-white bg-primary mt-4"><i class="bi bi-plus-circle"></i>Thêm Mới</a>
         <div class="row">
             <div class="col-12">
                 <table class="table table-image">
-                <thead>
-                    <tr>
-                    <th scope="col">STT</th>
-                    <th scope="col">Hình Ảnh</th>
-                    <th scope="col">Tên Sản Phẩm</th>
-                    <th scope="col">Thực Hiện</th>
-                    <th scope="col">Giá Bán</th>
-                    <th scope="col">Số Lượng</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <a href="#">
+                    <thead>
                         <tr>
-                            <th scope="row">1</th>
-                            <td class="w-25">
-                                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-                            </td>
-                            <td>Bootstrap 4 CDN and Starter Template</td>
-                            <td>
-                                <a class=" icon-link-hover"  href="#" style="font-size: 20px; margin:10px;">
-                                <i class="text-danger bi bi-trash"></i>
-                                </a>
-                                <a class=" icon-link-hover"  href="#" style="font-size: 20px; margin:10px;">
-                                    <i class="bi bi-pencil-square"></i>
-                                </a>
-                            <td>2.000.000</td>
-                            <td>1.434</td>
-                        
+                            <th scope="col">STT</th>
+                            <th scope="col">Hình Ảnh</th>
+                            <th scope="col">Tên Sản Phẩm</th>
+                            <th scope="col">Thực Hiện</th>
+                            <th scope="col">Giá Bán</th>
+                            <th scope="col">Số Lượng</th>
                         </tr>
-                    </a>
-                </tbody>
+                    </thead>
+                    <tbody>
+                        @foreach (var sanpham in Model)
+                        {
+                            <tr>
+                                <td scope="row">@sanpham.Id</td>
+                                <td class="w-25">
+                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
+                                </td>
+                                <td>@sanpham.TenSP</td>
+                                <td>
+                                    <a class=" icon-link-hover"  href="/Admin/SanPham/EditSP/@sanpham.Id" style="font-size: 20px; margin:10px;">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a class=" icon-link-hover"  href="/Admin/SanPham/Delete/@sanpham.Id" style="font-size: 20px; margin:10px;">
+                                    <i class="text-danger bi bi-trash"></i>
+                                    </a>
+                                </td>
+                                <td>@sanpham.GiaBan</td>
+                                <td>@sanpham.SoLuongTon</td>
+                            </tr>
+                        }
+                    </tbody>
                 </table>   
             </div>
         </div>

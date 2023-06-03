@@ -64,6 +64,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxEYW5oU2FjaFNhblBoYW0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/EditSP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxFZGl0U1AuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WorkSpace/_github/MvcWedBanDungCuHocTap/Areas/Admin/Views/SanPham/ThemSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FuUGhhbVxUaGVtU2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

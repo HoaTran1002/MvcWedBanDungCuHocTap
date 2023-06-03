@@ -4,6 +4,7 @@ using MvcWedBanDungCuHocTap.Models;
 using MvcWedBanSach.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
@@ -22,8 +23,8 @@ public class SanPhamController : Controller
     }
     public IActionResult DanhSachSanPham()
     {
-
-        return View();
+        var list = _context.SanPhams.ToList();
+        return View(list);
     }
     public IActionResult ThemSanPham()
     {
@@ -114,5 +115,100 @@ public class SanPhamController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+
+    [HttpGet]
+    public async Task<IActionResult> EditSP(int id)
+    {
+        var ChiTietSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(c => c.IdSP == id);
+        var SanPham = await _context.SanPhams.FindAsync(id);
+        ViewBag.ListLop = await _context.Lops.ToListAsync();
+        ViewBag.ListThuongHieu = await _context.ThuongHieus.ToListAsync();
+        ViewBag.ListTheLoai = await _context.TheLoais.ToListAsync();
+        ViewBag.danhMucSanPhams = await _context.DanhMucSanPhams.ToListAsync();
+        if (ChiTietSP == null || SanPham == null)
+        {
+            return NotFound();
+        }
+
+        ViewBag.ChiTietSanPham = ChiTietSP;
+        return View(SanPham);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> EditSP(SanPham updatedSanPhams, ChiTietSanPham ctsp)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                var existingSanPham = await _context.SanPhams.FindAsync(updatedSanPhams.Id);
+                var existingCTSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(r => r.IdSP == existingSanPham.Id);
+
+                if (existingSanPham == null || existingCTSP == null)
+                {
+                    return NotFound();
+                }
+
+                existingSanPham.MaSP = updatedSanPhams.MaSP;
+                existingSanPham.TenSP = updatedSanPhams.TenSP;
+                existingSanPham.MoTaSP = updatedSanPhams.MoTaSP;
+                existingSanPham.GiaBan = updatedSanPhams.GiaBan;
+                existingSanPham.GiaNhap = updatedSanPhams.GiaNhap;
+                existingSanPham.SoLuongNhap = updatedSanPhams.SoLuongNhap;
+                existingSanPham.SoLuongTon = updatedSanPhams.SoLuongTon;
+                existingSanPham.XuatSu = updatedSanPhams.XuatSu;
+
+                existingCTSP.IdLop = ctsp.IdLop;
+                existingCTSP.IdTheLoai = ctsp.IdTheLoai;
+                existingCTSP.IdThuongHieu = ctsp.IdThuongHieu;
+
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction("DanhSachSanPham", "SanPham");
+            }
+            catch (Exception)
+            {
+                return BadRequest(403);
+            }
+        }
+
+        return RedirectToAction("DanhSachSanPham", "SanPham");
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var ChiTietSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(c => c.IdSP == id);
+        var SanPham = await _context.SanPhams.FindAsync(id);
+        ViewBag.ListLop = await _context.Lops.ToListAsync();
+        ViewBag.ListThuongHieu = await _context.ThuongHieus.ToListAsync();
+        ViewBag.ListTheLoai = await _context.TheLoais.ToListAsync();
+        ViewBag.danhMucSanPhams = await _context.DanhMucSanPhams.ToListAsync();
+        if (ChiTietSP == null || SanPham == null)
+        {
+            return NotFound();
+        }
+
+        ViewBag.ChiTietSanPham = ChiTietSP;
+        return View(SanPham);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteConfirmed(int id)
+    {
+        var sanpham = await _context.SanPhams.FindAsync(id);
+        var ChiTietSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(c => c.IdSP == id);
+        if (sanpham == null)
+        {
+            return NotFound();
+        }
+
+        _context.SanPhams.Remove(sanpham);
+        _context.ChiTietSanPhams.Remove(ChiTietSP);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("DanhSachSanPham", "SanPham");
     }
 }
