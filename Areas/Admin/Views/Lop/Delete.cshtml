@@ -1,0 +1,28 @@
+@{
+  Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model MvcWedBanDungCuHocTap.Models.Lop
+<style>
+    .my-form-class{
+        width: 100%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <h2>Bạn có chắc muốn xóa mục lớp này</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <span>Id : @Model.Id</span>
+        </div>
+        <div class="col-lg-6">
+            <span>Tên mục lớp: @Model.DoiTuongSP</span>
+        </div>
+        <div class="col-lg-6">
+            <form action="/Admin/Lop/DeleteConfirmed/@Model.Id" method="post">
+                <button type="submit" class="btn btn-danger">Xóa</button>
+                <a href="/Admin/Lop/Index" class="btn btn-secondary">Hủy</a>
+            </form>
+        </div>
+    </div>
+</div>

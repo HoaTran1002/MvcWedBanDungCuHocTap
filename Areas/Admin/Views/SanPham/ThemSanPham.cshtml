@@ -1,0 +1,122 @@
+@using MvcWedBanDungCuHocTap.Models;
+@{
+    var ListLop = (List<Lop>)ViewBag.ListLop;
+    var ListThuongHieu = (List<ThuongHieu>)ViewBag.ListThuongHieu;
+    var ListTheLoai = (List<TheLoai>)ViewBag.ListTheLoai;
+    var danhMucSanPhams = (List<DanhMucSanPham>)ViewBag.ListdanhMucSanPhams;
+}
+
+
+@{
+    Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <form class="shadow-lg p-3 mb-5 bg-white rounded" action="PostThemSanPham" method="POST" enctype="multipart/form-data">
+        <div class="row">
+
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark" >Mã sản phẩm</label>
+                <input value=""name="MaSP" type="text" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark">Tên sản phẩm</label>
+                <input value=""name="TenSP"type="text" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark" >Mô tả</label>
+                <input value=""name="MoTaSP" type="text" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark">Xuất sứ</label>
+                <input value=""name="XuatSuSP" type="text" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark" >Số lượng nhập</label>
+                <input value=""name="SoLuongNhap" type="number" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark" >Số lượng Tồn</label>
+                <input value=""name="SoLuongTon" type="number" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark">Giá Nhập</label>
+                <input value=""name="GiaNhapSP" type="number" class="form-control"  >
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark" >Giá bán</label>
+                <input value=""name="GiaBanSP" type="number" class="form-control"  >
+            </div>
+            
+            <div class="form-group md-3 col-md-6">
+                <label class="text-dark" >Hình Ảnh</label>
+                <input name="hinhanh" type="file" class="form-control">
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <select value=""name="IdDanhMuc" class="form-select" aria-label="Danh Muc">
+                    <option selected>Danh Mục</option>
+                    @{
+                        foreach (var item in danhMucSanPhams)
+                        {
+                             <option value=@item.Id>@item.TenDM</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <select value=""name="TheLoaiSP" class="form-select" aria-label="Thể loại">
+                    <option selected>Thể loại</option>
+                    @{
+                        foreach (TheLoai item in ListTheLoai)
+                        {
+                             <option value=@item.Id>@item.TenTheLoai</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <select value=""name="ThuongHieuSP" class="form-select" aria-label="Thương hiệu">
+                    <option selected>Thương hiệu</option>
+                    @{
+                        foreach (ThuongHieu item in ListThuongHieu)
+                        {
+                             <option value=@item.Id>@item.TenThuongHieuSP</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group md-3 col-md-6">
+                <select value=""name="LopSP" class="form-select" aria-label="Lớp">
+                    <option selected>Lớp</option>
+                    @{
+                        foreach (Lop item in ListLop)
+                        {
+                             <option value=@item.Id>@item.DoiTuongSP</option>
+                        }
+                    }
+                </select>
+            </div>
+        
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Tạo Mới Sản Phẩm</button>
+    </form>
+    <!-- Hiển thị thông báo lỗi chung -->
+    @if (ViewBag.ErrorMessages != null)
+    {
+        <div class="text-danger">
+            <h4>Có lỗi xảy ra trong quá trình thêm sản phẩm:</h4>
+            <ul>
+                @foreach (var value in ViewBag.ErrorMessages)
+                {
+                    if (value.Errors.Any())
+                    {
+                        foreach (var error in value.Errors)
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    }
+                }
+            </ul>
+        </div>
+    }
+</div>

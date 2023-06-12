@@ -6,13 +6,15 @@ namespace MvcWedBanDungCuHocTap.Models
     {
         [Key]
         public int Id { get; set; }
-        [ForeignKey("SanPham")]
+
+        [ForeignKey("TheLoai")]
         public int IdTheLoai { get; set; }
         [ForeignKey("ThuongHieu")]
         public int IdThuongHieu { get; set; }
-        [ForeignKey("Lop")]
+
+        [ForeignKey("SanPham")]
         public int IdSP { get; set; }
-        [ForeignKey("TheLoai")]
+        [ForeignKey("Lop")]
         public int IdLop { get; set; }
 
     }

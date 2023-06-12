@@ -1,0 +1,42 @@
+@{
+  Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<MvcWedBanDungCuHocTap.Models.TheLoai>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Thể loại sản phẩm</h2>
+        </div>
+        <div class="col-lg-6">
+            <a href="/Admin/TheLoai/Create" class="btn border-primary text-white bg-primary mt-4"><i class="bi bi-plus-circle"></i>Thêm Mới</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table table-image">
+                <thead>
+                    <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên Thể loại sản phẩm</th>
+                    <th scope="col">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var theloai in Model)
+                    {
+                        <tr>
+                            <td>@theloai.Id</td>
+                            <td>@theloai.TenTheLoai</td>
+                            <td>
+                                <a href="/Admin/TheLoai/Details/@theloai.Id">Xem</a> |
+                                <a href="/Admin/TheLoai/Edit/@theloai.Id">Sửa</a> |
+                                <a href="/Admin/TheLoai/Delete/@theloai.Id">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>   
+        </div>
+    </div>
+</div>
