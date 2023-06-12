@@ -113,7 +113,7 @@ public class LopController : Controller
             }
             catch (Exception)
             {
-                return BadRequest(403);
+                return BadRequest("Lỗi");
             }
         }
 

@@ -2,100 +2,59 @@
     Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
     int id = 1;
 }
-<<<<<<< HEAD
-@model IEnumerable<MvcWedBanDungCuHocTap.Models.SanPham>
-=======
->>>>>>> 202b5ae73ea4f682450a8601cb324d35e438a6d6
 <div>
     <div class="container">
         <a href="/Admin/SanPham/ThemSanPham" class="btn border-primary text-white bg-primary mt-4"><i class="bi bi-plus-circle"></i>Thêm Mới</a>
         <div class="row">
             <div class="col-12">
                 <table class="table table-image">
-<<<<<<< HEAD
                     <thead>
                         <tr>
-                            <th scope="col">STT</th>
-                            <th scope="col">Hình Ảnh</th>
-                            <th scope="col">Tên Sản Phẩm</th>
-                            <th scope="col">Thực Hiện</th>
-                            <th scope="col">Giá Bán</th>
-                            <th scope="col">Số Lượng</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Hình Ảnh</th>
+                        <th scope="col">Tên Sản Phẩm</th>
+                        <th scope="col">Thực Hiện</th>
+                        <th scope="col">Giá Bán</th>
+                        <th scope="col">Số Lượng</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var sanpham in Model)
+                        @foreach (var item in ViewBag.ListSp)
                         {
                             <tr>
-                                <td scope="row">@sanpham.Id</td>
+                                <th scope="row">@item.SanPham.Id</th>
                                 <td class="w-25">
-                                    <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/sheep-3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
+                                    <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
                                 </td>
-                                <td>@sanpham.TenSP</td>
+                                <td>@item.SanPham.TenSP</td>
                                 <td>
-                                    <a class=" icon-link-hover"  href="/Admin/SanPham/EditSP/@sanpham.Id" style="font-size: 20px; margin:10px;">
+                                    <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
+                                        <i class="text-danger bi bi-trash"></i>
+                                    </a>
+                                    <a class="icon-link-hover" href="#" onclick="submitFormEdit()" style="font-size: 20px; margin:10px;">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
-                                    <a class=" icon-link-hover"  href="/Admin/SanPham/Delete/@sanpham.Id" style="font-size: 20px; margin:10px;">
-                                    <i class="text-danger bi bi-trash"></i>
+                                    <a class="icon-link-hover" href="#" onclick="submitFormDetail()" style="font-size: 20px; margin:10px;">
+                                        <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
-                                <td>@sanpham.GiaBan</td>
-                                <td>@sanpham.SoLuongTon</td>
+                                <td>@item.SanPham.GiaBan</td>
+                                <td>@item.SanPham.SoLuongNhap</td>
+                                @* tạo form ẩn *@
+                                <form id="myForm" method="POST" action="XoaSanPham">
+                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                </form>  
+                                <form id="myFormEdit" method="Get" action="SuaSanPham">
+                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                </form>  
+                                <form id="myFormDetail" method="POST" action="XemChiTiet">
+                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                </form>  
                             </tr>
                         }
-                    </tbody>
-                </table>   
-=======
-                <thead>
-                    <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Hình Ảnh</th>
-                    <th scope="col">Tên Sản Phẩm</th>
-                    <th scope="col">Thực Hiện</th>
-                    <th scope="col">Giá Bán</th>
-                    <th scope="col">Số Lượng</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in ViewBag.ListSp)
-                    {
-                        <tr>
-                            <th scope="row">@item.SanPham.Id</th>
-                            <td class="w-25">
-                                <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
-                            </td>
-                            <td>@item.SanPham.TenSP</td>
-                            <td>
-                                <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
-                                    <i class="text-danger bi bi-trash"></i>
-                                </a>
-                                <a class="icon-link-hover" href="#" onclick="submitFormEdit()" style="font-size: 20px; margin:10px;">
-                                    <i class="bi bi-pencil-square"></i>
-                                </a>
-                                <a class="icon-link-hover" href="#" onclick="submitFormDetail()" style="font-size: 20px; margin:10px;">
-                                    <i class="bi bi-eye"></i>
-                                </a>
-                            </td>
-                            <td>@item.SanPham.GiaBan</td>
-                            <td>@item.SanPham.SoLuongNhap</td>
-                             @* tạo form ẩn *@
-                            <form id="myForm" method="POST" action="XoaSanPham">
-                                <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                            </form>  
-                            <form id="myFormEdit" method="Get" action="SuaSanPham">
-                                <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                            </form>  
-                            <form id="myFormDetail" method="POST" action="XemChiTiet">
-                                <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                            </form>  
-                        </tr>
-                    }
 
-                </tbody>
+                    </tbody>
                 </table> 
-               
->>>>>>> 202b5ae73ea4f682450a8601cb324d35e438a6d6
             </div>
         </div>
     </div>    

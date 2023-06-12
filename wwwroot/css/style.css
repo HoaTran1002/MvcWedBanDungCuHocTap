@@ -520,7 +520,12 @@ mark,
   font-size: 80%;
   color: #6c757d;
 }
-
+.color-white{
+  color:white;
+}
+.form-style{
+  width: 100%;
+}
 .blockquote-footer::before {
   content: "\2014\00A0";
 }

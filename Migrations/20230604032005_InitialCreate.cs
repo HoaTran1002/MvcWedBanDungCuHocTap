@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MvcWedBanDungCuHocTap.Migrations
 {
     /// <inheritdoc />
-    public partial class AddMigrationAuthencatition_2 : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,7 +30,9 @@ namespace MvcWedBanDungCuHocTap.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProfilePicture = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -49,6 +51,109 @@ namespace MvcWedBanDungCuHocTap.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ChiTietSanPhams",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdTheLoai = table.Column<int>(type: "int", nullable: false),
+                    IdThuongHieu = table.Column<int>(type: "int", nullable: false),
+                    IdSP = table.Column<int>(type: "int", nullable: false),
+                    IdLop = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ChiTietSanPhams", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "DanhMucSanPhams",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TenDM = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DanhMucSanPhams", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HinhAnhs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdSP = table.Column<int>(type: "int", nullable: false),
+                    HinhAnhSP = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HinhAnhs", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Lops",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DoiTuongSP = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Lops", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SanPhams",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MaSP = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TenSP = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    MoTaSP = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    XuatSu = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SoLuongNhap = table.Column<int>(type: "int", nullable: false),
+                    SoLuongTon = table.Column<int>(type: "int", nullable: false),
+                    GiaNhap = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    GiaBan = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    IdDanhMucSanPham = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SanPhams", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TheLoais",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TenTheLoai = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TheLoais", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ThuongHieus",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TenThuongHieuSP = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ThuongHieus", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -214,6 +319,27 @@ namespace MvcWedBanDungCuHocTap.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "ChiTietSanPhams");
+
+            migrationBuilder.DropTable(
+                name: "DanhMucSanPhams");
+
+            migrationBuilder.DropTable(
+                name: "HinhAnhs");
+
+            migrationBuilder.DropTable(
+                name: "Lops");
+
+            migrationBuilder.DropTable(
+                name: "SanPhams");
+
+            migrationBuilder.DropTable(
+                name: "TheLoais");
+
+            migrationBuilder.DropTable(
+                name: "ThuongHieus");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

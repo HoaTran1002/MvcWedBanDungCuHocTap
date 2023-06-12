@@ -22,8 +22,11 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var query = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b }).ToList();
+        ViewBag.ListSp = query;
         return View();
     }
     [Authorize]
@@ -43,9 +46,37 @@ public class HomeController : Controller
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         return View();
     }
-    public IActionResult Detail()
+
+    public IActionResult Search(string keysearch)
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .Where(p => p.SanPham.TenSP.Contains(keysearch))
+            .ToList();
+            ViewBag.keysearch = keysearch;
+            ViewBag.ListSp =products;
+        return View();
+    }
+
+    public IActionResult Detail(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var query = (   from a in _context.SanPhams
+                        join b in _context.HinhAnhs on a.Id equals b.IdSP
+                        join c in _context.ChiTietSanPhams on a.Id equals c.IdSP
+                        join d in _context.ThuongHieus on c.IdThuongHieu equals d.Id
+                        join e in _context.TheLoais on c.IdTheLoai equals e.Id
+                        join f in _context.Lops on c.IdLop equals f.Id
+                        join g in _context.DanhMucSanPhams on a.IdDanhMucSanPham equals g.Id
+                        where a.Id == id 
+                        select new { SanPham = a, HinhAnh = b, ThuongHieu = d, TheLoai = e, Lop = f, DanhMuc = g }).FirstOrDefault();
+        ViewBag.SanPham = query;
         return View();
     }
     public IActionResult Shop()
