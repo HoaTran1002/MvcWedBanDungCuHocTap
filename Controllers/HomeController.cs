@@ -95,8 +95,65 @@ public class HomeController : Controller
     public IActionResult Shop()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
-
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .ToList();
+            ViewBag.ListSp =products;
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ShopSearch(string keysearch)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .Where(p => p.SanPham.TenSP.Contains(keysearch))
+            .ToList();
+            ViewBag.ListSp =products;
+        return View("Shop");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ShopFilter(string priceFilter)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        decimal price1, price2;
+
+        switch (priceFilter)
+        {
+            case "1":
+                price1 = 0;
+                price2 = 50000;
+                break;
+            case "2":
+                price1 = 50000;
+                price2 = 200000;
+                break;
+            case "3":
+                price1 = 200000;
+                price2 = 500000;
+                break;
+            case "4":
+                price1 = 500000;
+                price2 = 1000000000;
+                break;
+            default:
+                price1 = 0;
+                price2 = 1000000000;
+                break;
+        }
+
+        var products = (from a in _context.SanPhams
+                        join b in _context.HinhAnhs on a.Id equals b.IdSP
+                        select new { SanPham = a, HinhAnh = b })
+                        .Where(p => p.SanPham.GiaBan.GetValueOrDefault() >= (decimal)price1 && p.SanPham.GiaBan.GetValueOrDefault() <= (decimal)price2)
+                        .ToList();
+
+        ViewBag.ListSp = products;
+    return View("Shop");
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -67,11 +67,11 @@
                 </form>
             </div>
             <div class="col-lg-3 col-6 text-right">
-                <a href="" class="btn border">
+                <a href="/Cart" class="btn border">
                     <i class="fas fa-heart text-primary"></i>
                     <span class="badge">0</span>
                 </a>
-                <a href="" class="btn border">
+                <a href="/Home/Cart" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
                     <span class="badge">0</span>
                 </a>
@@ -89,18 +89,15 @@
                     <h6 class="m-0 color-white">DANH MỤC SẢN PHẨM</h6>
                     <i class="fa fa-angle-down color-white"></i>
                 </a>
-                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 999;">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
-                        <div class="nav-item dropdown">
-                            <div class="nav-item dropdown">
-                                @foreach (var item in danhMucSanPhams)
-                                {
-                                    <a href="/Home/ListProductType?id=@item.Id" class="nav-link" data-toggle="dropdown">
-                                        @item.TenDM
-                                    </a>
-                                }
-                            </div>
-                            
+                        <div class="nav-item">
+                            @foreach (var item in danhMucSanPhams)
+                            {
+                                <a href="/Home/ListProductType/@item.Id" class="nav-link">
+                                    @item.TenDM
+                                </a>
+                            }
                         </div>
                        
                     </div>
@@ -117,8 +114,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Trang chủ</a>
-                            <a asp-controller="Home" asp-action="Shop" class="nav-item nav-link active">Shop</a>
-                            <a asp-controller="Home" asp-action="Detail" class="nav-item nav-link">Shop Detail</a>
+                            <a asp-controller="Home" asp-action="Shop" class="nav-item nav-link active">Cửa hàng </a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded-0 m-0">
