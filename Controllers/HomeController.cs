@@ -77,6 +77,7 @@ public class HomeController : Controller
                         where a.Id == id 
                         select new { SanPham = a, HinhAnh = b, ThuongHieu = d, TheLoai = e, Lop = f, DanhMuc = g }).FirstOrDefault();
         ViewBag.SanPham = query;
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         return View();
     }
     public IActionResult Shop()
