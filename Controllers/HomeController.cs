@@ -27,6 +27,15 @@ public class HomeController : Controller
                      join b in _context.HinhAnhs on a.Id equals b.IdSP
                      select new { SanPham = a, HinhAnh = b }).ToList();
         ViewBag.ListSp = query;
+        var queryDM = (from danhMuc in _context.DanhMucSanPhams
+            join sanPham in _context.SanPhams on danhMuc.Id equals sanPham.IdDanhMucSanPham into sanPhamGroup
+            select new
+            {
+                MaDanhMuc = danhMuc.Id,
+                TenDanhMuc = danhMuc.TenDM,
+                SoLuongSanPham = sanPhamGroup.Count()
+            }).ToList();
+        ViewBag.listDM = queryDM;
         return View();
     }
     [Authorize]

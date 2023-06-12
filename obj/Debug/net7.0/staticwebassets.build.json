@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TirIVI0ACeHH4HHmB03iKIlv65DQCtCTXq9V3PcyWJg=",
+  "Hash": "PkCM/izfcYRVjXHvBaIH2L8nEAaQGObOKHTaGMiXLxo=",
   "Source": "MvcWedBanDungCuHocTap",
   "BasePath": "_content/MvcWedBanDungCuHocTap",
   "Mode": "Default",
@@ -3721,6 +3721,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\product-8.jpg"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\school-supplies.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/school-supplies.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\school-supplies.png"
     },
     {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\sprites\\blue.png",

@@ -869,6 +869,10 @@
       "PackagePath": "staticwebassets\\img\\product-8.jpg"
     },
     {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\school-supplies.png",
+      "PackagePath": "staticwebassets\\img\\school-supplies.png"
+    },
+    {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\sprites\\blue.png",
       "PackagePath": "staticwebassets\\img\\sprites\\blue.png"
     },

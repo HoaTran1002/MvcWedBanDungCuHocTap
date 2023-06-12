@@ -67,10 +67,6 @@
                 </form>
             </div>
             <div class="col-lg-3 col-6 text-right">
-                <a href="/Cart" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
                 <a href="/Home/Cart" class="btn border">
                     <i class="fas fa-shopping-cart text-primary"></i>
                     <span class="badge">0</span>
@@ -115,20 +111,13 @@
                         <div class="navbar-nav mr-auto py-0">
                             <a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Trang chủ</a>
                             <a asp-controller="Home" asp-action="Shop" class="nav-item nav-link active">Cửa hàng </a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a asp-controller="Home" asp-action="Cart" class="dropdown-item">Shopping Cart</a>
-                                    <a asp-controller="Home" asp-action="Checkout" class="dropdown-item">Checkout</a>
-                                </div>
-                            </div>
-                            <a asp-controller="Home" asp-action="Contact" class="nav-item nav-link">Contact</a>
+                            <a asp-controller="Home" asp-action="Contact" class="nav-item nav-link">Liên hệ</a>
                         </div>
                         @if (!string.IsNullOrEmpty(User.Identity.Name))
                         {
                             <div class="navbar-nav ml-auto py-0">
-                                    <a asp-controller="UserAuthentication" asp-action="ChangePassword" class="nav-item nav-link">Change Password</a>
-                                    <a asp-controller="UserAuthentication" asp-action="Logout" class="nav-item nav-link">Logout</a>
+                                    <a asp-controller="UserAuthentication" asp-action="ChangePassword" class="nav-item nav-link">Đổi mật khẩu</a>
+                                    <a asp-controller="UserAuthentication" asp-action="Logout" class="nav-item nav-link">Đăng xuất</a>
                                 </div>
                         }else{
 
