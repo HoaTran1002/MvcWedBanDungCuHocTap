@@ -60,6 +60,18 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult ListProductType(int id)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .Where(p => p.SanPham.IdDanhMucSanPham == id)
+            .ToList();
+            ViewBag.ListSp =products;
+        return View();
+    }
+
     public IActionResult Detail(int? id)
     {
         if (id == null)

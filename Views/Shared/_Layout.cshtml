@@ -50,7 +50,7 @@
         </div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
+                <a href="/Home/Index" class="text-decoration-none">
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                 </a>
             </div>
@@ -95,7 +95,7 @@
                             <div class="nav-item dropdown">
                                 @foreach (var item in danhMucSanPhams)
                                 {
-                                    <a href="#" class="nav-link" data-toggle="dropdown">
+                                    <a href="/Home/ListProductType?id=@item.Id" class="nav-link" data-toggle="dropdown">
                                         @item.TenDM
                                     </a>
                                 }
@@ -116,7 +116,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Home</a>
+                            <a asp-controller="Home" asp-action="Index" class="nav-item nav-link">Trang chủ</a>
                             <a asp-controller="Home" asp-action="Shop" class="nav-item nav-link active">Shop</a>
                             <a asp-controller="Home" asp-action="Detail" class="nav-item nav-link">Shop Detail</a>
                             <div class="nav-item dropdown">
