@@ -30,7 +30,7 @@ public class SanPhamController : Controller
                      join b in _context.HinhAnhs on a.Id equals b.IdSP
                      select new { SanPham = a, HinhAnh = b }).ToList();
         ViewBag.ListSp = query;
-        return View(query);
+        return View();
     }
     [HttpGet]
     public IActionResult XemChiTiet()
@@ -223,7 +223,11 @@ public class SanPhamController : Controller
             }
             catch (Exception)
             {
+<<<<<<< HEAD
                 return BadRequest(403);
+=======
+                return BadRequest("Lỗi");
+>>>>>>> origin/main
             }
         }
 

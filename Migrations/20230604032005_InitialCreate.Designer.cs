@@ -12,8 +12,8 @@ using MvcWedBanDungCuHocTap.Models;
 namespace MvcWedBanDungCuHocTap.Migrations
 {
     [DbContext(typeof(DbApplicationContext))]
-    [Migration("20230602165436_AddMigrationAuthencatition_2")]
-    partial class AddMigrationAuthencatition_2
+    [Migration("20230604032005_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -177,7 +177,11 @@ namespace MvcWedBanDungCuHocTap.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -203,6 +207,9 @@ namespace MvcWedBanDungCuHocTap.Migrations
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ProfilePicture")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");

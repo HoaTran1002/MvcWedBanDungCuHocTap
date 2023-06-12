@@ -33,7 +33,7 @@ public class DanhMucController : Controller{
     }
 
     [HttpPost]
-    public async Task<IActionResult> PostCreate( string TenDM)
+    public async Task<IActionResult> PostCreate(string TenDM)
     {
         try
         {
@@ -48,8 +48,9 @@ public class DanhMucController : Controller{
                 return RedirectToAction("Index", "DanhMuc");
             }
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            _logger.LogError(ex, ex.Message);
             return BadRequest("Có lỗi xảy ra trong quá trình xử lý yêu cầu của bạn.");
         }
 
