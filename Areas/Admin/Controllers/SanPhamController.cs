@@ -223,11 +223,7 @@ public class SanPhamController : Controller
             }
             catch (Exception)
             {
-<<<<<<< HEAD
-                return BadRequest(403);
-=======
-                return BadRequest("Lỗi");
->>>>>>> origin/main
+
             }
         }
 
