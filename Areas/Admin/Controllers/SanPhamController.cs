@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+
 using Microsoft.Extensions.Logging;
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
@@ -223,6 +224,8 @@ public class SanPhamController : Controller
             }
             catch (Exception)
             {
+
+                return BadRequest("Lỗi");
 
             }
         }
