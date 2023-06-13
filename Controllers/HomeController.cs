@@ -27,6 +27,15 @@ public class HomeController : Controller
                      join b in _context.HinhAnhs on a.Id equals b.IdSP
                      select new { SanPham = a, HinhAnh = b }).ToList();
         ViewBag.ListSp = query;
+        var queryDM = (from danhMuc in _context.DanhMucSanPhams
+            join sanPham in _context.SanPhams on danhMuc.Id equals sanPham.IdDanhMucSanPham into sanPhamGroup
+            select new
+            {
+                MaDanhMuc = danhMuc.Id,
+                TenDanhMuc = danhMuc.TenDM,
+                SoLuongSanPham = sanPhamGroup.Count()
+            }).ToList();
+        ViewBag.listDM = queryDM;
         return View();
     }
     [Authorize]
@@ -60,6 +69,18 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult ListProductType(int id)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .Where(p => p.SanPham.IdDanhMucSanPham == id)
+            .ToList();
+            ViewBag.ListSp =products;
+        return View();
+    }
+
     public IActionResult Detail(int? id)
     {
         if (id == null)
@@ -77,13 +98,71 @@ public class HomeController : Controller
                         where a.Id == id 
                         select new { SanPham = a, HinhAnh = b, ThuongHieu = d, TheLoai = e, Lop = f, DanhMuc = g }).FirstOrDefault();
         ViewBag.SanPham = query;
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         return View();
     }
     public IActionResult Shop()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
-
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .ToList();
+            ViewBag.ListSp =products;
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ShopSearch(string keysearch)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var products = (from a in _context.SanPhams
+                     join b in _context.HinhAnhs on a.Id equals b.IdSP
+                     select new { SanPham = a, HinhAnh = b })
+            .Where(p => p.SanPham.TenSP.Contains(keysearch))
+            .ToList();
+            ViewBag.ListSp =products;
+        return View("Shop");
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ShopFilter(string priceFilter)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        decimal price1, price2;
+
+        switch (priceFilter)
+        {
+            case "1":
+                price1 = 0;
+                price2 = 50000;
+                break;
+            case "2":
+                price1 = 50000;
+                price2 = 200000;
+                break;
+            case "3":
+                price1 = 200000;
+                price2 = 500000;
+                break;
+            case "4":
+                price1 = 500000;
+                price2 = 1000000000;
+                break;
+            default:
+                price1 = 0;
+                price2 = 1000000000;
+                break;
+        }
+
+        var products = (from a in _context.SanPhams
+                        join b in _context.HinhAnhs on a.Id equals b.IdSP
+                        select new { SanPham = a, HinhAnh = b })
+                        .Where(p => p.SanPham.GiaBan.GetValueOrDefault() >= (decimal)price1 && p.SanPham.GiaBan.GetValueOrDefault() <= (decimal)price2)
+                        .ToList();
+
+        ViewBag.ListSp = products;
+    return View("Shop");
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
