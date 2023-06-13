@@ -1,5 +1,8 @@
 @{
-    ViewData["Title"] = "Cart Page";
+   
+    var cartList = ViewBag.carts;
+    var TongTien = ViewBag.TongTien;
+    var ThanhToanTong = ViewBag.ThanhToanTong;
 }
 
 
@@ -16,29 +19,44 @@
                             <th>Xóa</th>
                         </tr>
                     </thead>
-                    <tbody class="align-middle">
+                <tbody class="align-middle">
+                    @foreach (var item in cartList)
+                    {
                         <tr>
-                            <td class="align-middle"><img src="~/img/school-supplies.png" alt="" style="width: 50px;"> Thước eke</td>
-                            <td class="align-middle">15,000đ</td>
+                            <td class="align-middle">@item.TenSP</td>
+                            <td class="align-middle">@item.GiaBan.ToString("N0")đ</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus">
-                                        <i class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </div>
+                                    <a href="/Home/DecreaCart/@item.SanPhamId" class="btn btn-sm text-dark p-0">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-primary btn-minus">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </a>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="@item.SoLuong">
+                                    <a href="/Home/IncreaCart/@item.SanPhamId" class="btn btn-sm text-dark p-0">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-primary btn-plus">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </a>
                                 </div>
                             </td>
-                            <td class="align-middle">15,000đ</td>
-                            <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
+                            <td class="align-middle">@item.TongTien.ToString("N0")đ</td>
+                            <td class="align-middle">
+                                <a href="/Home/DeleteCart/@item.SanPhamId" class="btn btn-sm text-dark p-0">
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                </a>
+
+                                
+                            </td>
                         </tr>
-                    </tbody>
+                    }
+                </tbody>
                 </table>
             </div>
             <div class="col-lg-4">
@@ -49,7 +67,7 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-3 pt-1">
                             <h6 class="font-weight-medium">Tổng tiền</h6>
-                            <h6 class="font-weight-medium">15,000đ</h6>
+                            <h6 class="font-weight-medium">@TongTien</h6>
                         </div>
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-medium">Phí vận chuyển</h6>
@@ -59,7 +77,7 @@
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Thanh toán tổng</h5>
-                            <h5 class="font-weight-bold">25,000đ</h5>
+                            <h5 class="font-weight-bold">@ThanhToanTong</h5>
                         </div>
                         <button class="btn btn-block btn-primary my-3 py-3">Thanh toán</button>
                     </div>

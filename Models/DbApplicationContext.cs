@@ -14,6 +14,7 @@ namespace MvcWedBanDungCuHocTap.Models
         public DbSet<Lop>? Lops { get; set; }
         public DbSet<TheLoai>? TheLoais { get; set; }
         public DbSet<ThuongHieu>? ThuongHieus { get; set; }
+        public DbSet<GioHang>? GioHangs { get; set; }
 
     }
 }

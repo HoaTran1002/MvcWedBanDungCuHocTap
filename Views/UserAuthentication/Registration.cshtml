@@ -4,64 +4,110 @@
 }
 
 <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-form {
+
+            border: 3px solid #f1f1f1;
+            width: 60%;
+        }
+
+        .login-form__image {
+            flex: 0.5;
+        }
+
+        .login-form__image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .login-form__form {
+
+
+            flex: 0.5;
+            padding: 16px;
+
+            height: 300px;
+        }
+
+        .err {
+            color: red;
+        }
+    </style>
 @Html.ValidationSummary()
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 center-block">
-            <h3>Registration</h3>
+
+
+            <div class="login-form__image">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                     class="img-fluid" alt="Sample image">
+            </div>
+            <div class="login-form__form">
+                    <h3>Đăng Ký Tài Khoản</h3>
             <form asp-action="Registration" method="post">
                 <div class="form-group">
-                    <label>FName*</label>
-                    <input type="text" class="form-control" asp-for="FirstName"/>
-                    <span class="text-danger"  asp-validation-for="FirstName"></span>
+                    <label>Họ</label>
+                    <input style="margin: 4px;border:0.5px solid #222; width: 100%; height: 20px" type="text" class="form-control" asp-for="FirstName"/>
+                    <span style="color:red;" class="text-danger"  asp-validation-for="FirstName"></span>
                 </div>
 
                 <div class="form-group">
-                    <label>LName*</label>
-                    <input type="text" class="form-control" asp-for="LastName" />
-                    <span class="text-danger" asp-validation-for="LastName"></span>
+                    <label>Tên</label>
+                    <input style="margin: 4px;border:0.5px solid #222; width: 100%; height: 20px" type="text" class="form-control" asp-for="LastName" />
+                    <span style="color:red;" class="text-danger" asp-validation-for="LastName"></span>
                 </div>
 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" class="form-control" asp-for="Email" />
-                    <span class="text-danger" asp-validation-for="Email"></span>
+                    <input style="margin: 4px;border:0.5px solid #222; width: 100%; height: 20px" type="text" class="form-control" asp-for="Email" />
+                    <span style="color:red;" class="text-danger" asp-validation-for="Email"></span>
 
                 </div>
 
                 <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" asp-for="Username" />
-                    <span class="text-danger" asp-validation-for="Username"></span>
+                    <label>Tên tài khoản</label>
+                    <input style="margin: 4px;border:0.5px solid #222; width: 100%; height: 20px" type="text" class="form-control" asp-for="Username" />
+                    <span style="color:red;" class="text-danger" asp-validation-for="Username"></span>
 
                 </div>
 
                 <div class="form-group">
-                    <label>Password (eg. John@123)</label>
-                    <input type="password" class="form-control" asp-for="Password" />
-                    <span class="text-danger" asp-validation-for="Password"></span>
+                    <label>Mật khẩu (ví dụ. John@123)</label>
+                    <input style="margin: 4px;border:0.5px solid #222; width: 100%; height: 20px" type="password" class="form-control" asp-for="Password" />
+                    <span style="color:red;" class="text-danger" asp-validation-for="Password"></span>
 
                 </div>
 
                 <div class="form-group">
-                    <label>Password confirm</label>
-                    <input type="password" class="form-control" asp-for="PasswordConfirm" />
-                    <span class="text-danger" asp-validation-for="PasswordConfirm"></span>
+                    <label>Nhập lại mật khẩu</label>
+                    <input style="margin: 4px;border:0.5px solid #222; width: 100%; height: 20px" type="password" class="form-control" asp-for="PasswordConfirm" />
+                    <span style="color:red;" class="text-danger" asp-validation-for="PasswordConfirm"></span>
 
                 </div>
 
-               
-                
+
+
                 @if (TempData["msg"] != null)
-                {
-                    <div class="form-group">
-                       <span class="text-info">@TempData["msg"]</span>
-                    </div>
-                }
+            {
+                                                        <div class="form-group">
+                                                           <span style="color:green;" class="text-info">@TempData["msg"]</span>
+                                                        </div>
+            }
 
-                <button type="submit" class="btn btn-info">Registration</button>
-                <a class="btn btn-primary" href="/UserAuthentication/Login">Login</a>
+                <button type="submit"  style="margin: 10px; background:#fff; color:blue; border:1px solid #222;boder-radius:3px; width:100px; height:40px;" class="btn btn-info">Đăng ký</button>
+                <a class="btn btn-primary" href="/UserAuthentication/Login">đăng nhập tài khoản ngay</a>
             </form>
+            </div>
         </div>
-    </div>
+
+
 </div>
+
+
+
