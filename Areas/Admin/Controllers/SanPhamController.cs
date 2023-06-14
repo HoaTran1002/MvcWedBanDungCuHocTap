@@ -39,8 +39,8 @@ public class SanPhamController : Controller
 
         return View();
     }
-    [HttpGet("/Admin/SanPham/SuaSanPham/{Id}")]
-    public async Task<IActionResult> SuaSanPham([FromRoute] int Id)
+
+    public async Task<IActionResult> SuaSanPham(int Id)
     {
         // Sử dụng ID để thực hiện các xử lý khác, ví dụ:
         return View();

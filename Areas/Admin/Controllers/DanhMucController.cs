@@ -2,14 +2,14 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MvcWedBanDungCuHocTap.Models;
 using Microsoft.EntityFrameworkCore;
-using MvcWedBanSach.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
 
-namespace MvcWedBanSach.Areas.Admin.Controllers;
+namespace MvcWedBanDungCuHocTap.Areas.Admin.Controllers;
 
 [Area("Admin")]
-public class DanhMucController : Controller{
+public class DanhMucController : Controller
+{
     private readonly ILogger<DanhMucController> _logger;
     private readonly IWebHostEnvironment _hostEnvironment;
     private readonly DbApplicationContext _context;
@@ -65,7 +65,7 @@ public class DanhMucController : Controller{
         }
 
         var danhmuc = await _context.DanhMucSanPhams.FindAsync(id);
-        if (danhmuc== null)
+        if (danhmuc == null)
         {
             return NotFound();
         }
@@ -73,7 +73,7 @@ public class DanhMucController : Controller{
         return View(danhmuc);
     }
 
-   [HttpGet]
+    [HttpGet]
     public async Task<IActionResult> Edit(int id)
     {
         var danhmuc = await _context.DanhMucSanPhams.FindAsync(id);
