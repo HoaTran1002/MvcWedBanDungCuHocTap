@@ -5,108 +5,110 @@
 @model MvcWedBanDungCuHocTap.Models.SanPham
 
 <div class="container">
-    <form class="shadow-lg p-3 mb-5 bg-white rounded" action="EditSP" method="POST" enctype="multipart/form-data">
-        <div class="row">
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputEmail1">Mã sản phẩm</label>
-                <input value="@Model.MaSP" name="MaSP" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputPassword1">Tên sản phẩm</label>
-                <input value="@Model.TenSP" name="TenSP"type="text" class="form-control" id="exampleInputPassword1" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputEmail1">Mô tả</label>
-                <input value="@Model.MoTaSP" name="MoTaSP" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputPassword1">Xuất sứ</label>
-                <input value="@Model.XuatSu"name="XuatSuSP" type="text" class="form-control" id="exampleInputPassword1" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputEmail1">Số lượng nhập</label>
-                <input value="@Model.SoLuongNhap"name="SoLuongNhap" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputEmail1">Số lượng Tồn</label>
-                <input value="@Model.SoLuongTon"name="SoLuongTon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputPassword1">Giá Nhập</label>
-                <input value="@Model.GiaNhap"name="GiaNhapSP" type="text" class="form-control" id="exampleInputPassword1" >
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" for="exampleInputEmail1">Giá bán</label>
-                <input value="@Model.GiaBan"name="GiaBanSP" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-            </div>
-            
-            <div class="form-group md-3 col-md-6">
-                <label class="text-dark" >Hình Ảnh</label>
-                <input name="hinhanh.HinhAnhSP" type="file" class="form-control">
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <select value=""name="IdDanhMuc" class="form-select" aria-label="Danh Muc">
-                    @{
-                        foreach (var item in ViewBag.danhMucSanPhams)
-                        {
-                            if(item.Id == Model.IdDanhMucSanPham){
-                                <option value="@item.Id" selected>@item.TenDM</option>
-                            }else{
-                                <option value="@item.Id">@item.TenDM</option>
-                            }
-                        }
-                    }
-                </select>
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <select value=""name="TheLoaiSP" class="form-select" aria-label="Thể loại">
-                    @{
-                        foreach (TheLoai item in ViewBag.ListTheLoai)
-                        {
-                            if(item.Id == ViewBag.ChiTietSanPham.IdTheLoai){
-                                <option value="@item.Id" selected>@item.TenTheLoai</option>
-                            }else{
-                                <option value="@item.Id">@item.TenTheLoai</option>
-                            }
-                        }
-                    }
-                </select>
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <select value=""name="ThuongHieuSP" class="form-select" aria-label="Thương hiệu">
-                  
-                    @{
-                        foreach (ThuongHieu item in ViewBag.ListThuongHieu)
-                        {
-                            if(item.Id == ViewBag.ChiTietSanPham.IdThuongHieu){
-                                <option value="@item.Id" selected>@item.TenThuongHieuSP</option>
-                            }else{
-                                <option value="@item.Id">@item.TenThuongHieuSP</option>
-                            }
-                        }
-                    }
-                </select>
-            </div>
-            <div class="form-group md-3 col-md-6">
-                <select value=""name="LopSP" class="form-select" aria-label="Lớp">
-                
-                    @{
-                        foreach (Lop item in ViewBag.ListLop)
-                        {
-                            if(item.Id == ViewBag.ChiTietSanPham.IdLop){
-                                <option value="@item.Id" selected>@item.DoiTuongSP</option>
-                            }else{
-                                <option value="@item.Id">@item.DoiTuongSP</option>
-                            }
-                        }
-                    }
-                </select>
-            </div>
-        
+    <form class="shadow-lg p-3 mb-5 bg-white rounded" action="/Admin/SanPham/EditSP" method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <input type="text" value="@Model.Id" hidden name="Id">
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputEmail1">Mã sản phẩm</label>
+            <input value="@Model.MaSP" name="MaSP" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputPassword1">Tên sản phẩm</label>
+            <input value="@Model.TenSP" name="TenSP" type="text" class="form-control" id="exampleInputPassword1" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputEmail1">Mô tả</label>
+            <input value="@Model.MoTaSP" name="MoTaSP" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputPassword1">Xuất sứ</label>
+            <input value="@Model.XuatSu"name="XuatSu" type="text" class="form-control" id="exampleInputPassword1" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputEmail1">Số lượng nhập</label>
+            <input value="@Model.SoLuongNhap"name="SoLuongNhap" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputEmail1">Số lượng Tồn</label>
+            <input value="@Model.SoLuongTon"name="SoLuongTon" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputPassword1">Giá Nhập</label>
+            <input value="@Model.GiaNhap"name="GiaNhap" type="text" class="form-control" id="exampleInputPassword1" >
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" for="exampleInputEmail1">Giá bán</label>
+            <input value="@Model.GiaBan"name="GiaBan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
         </div>
         
-        <button type="submit" class="btn btn-primary">Cập nhập Sản Phẩm</button>
+        <div class="form-group md-3 col-md-6">
+            <label class="text-dark" >Hình Ảnh</label>
+            <input name="hinhanh.HinhAnhSP" type="file" class="form-control">
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <select name="IdDanhMuc" class="form-select" aria-label="Danh Muc">
+                @{
+                    foreach (var item in ViewBag.danhMucSanPhams)
+                    {
+                        if(item.Id == Model.IdDanhMucSanPham){
+                            <option value="@item.Id" selected>@item.TenDM</option>
+                        }else{
+                            <option value="@item.Id">@item.TenDM</option>
+                        }
+                    }
+                }
+            </select>
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <select name="IdTheLoai" class="form-select" aria-label="Thể loại">
+                @{
+                    foreach (TheLoai item in ViewBag.ListTheLoai)
+                    {
+                        if(item.Id == ViewBag.ChiTietSanPham.IdTheLoai){
+                            <option value="@item.Id" selected>@item.TenTheLoai</option>
+                        }else{
+                            <option value="@item.Id">@item.TenTheLoai</option>
+                        }
+                    }
+                }
+            </select>
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <select name="IdThuongHieu" class="form-select" aria-label="Thương hiệu">
+              
+                @{
+                    foreach (ThuongHieu item in ViewBag.ListThuongHieu)
+                    {
+                        if(item.Id == ViewBag.ChiTietSanPham.IdThuongHieu){
+                            <option value="@item.Id" selected>@item.TenThuongHieuSP</option>
+                        }else{
+                            <option value="@item.Id">@item.TenThuongHieuSP</option>
+                        }
+                    }
+                }
+            </select>
+        </div>
+        <div class="form-group md-3 col-md-6">
+            <select name="IdLop" class="form-select" aria-label="Lớp">
+            
+                @{
+                    foreach (Lop item in ViewBag.ListLop)
+                    {
+                        if(item.Id == ViewBag.ChiTietSanPham.IdLop){
+                            <option value="@item.Id" selected>@item.DoiTuongSP</option>
+                        }else{
+                            <option value="@item.Id">@item.DoiTuongSP</option>
+                        }
+                    }
+                }
+            </select>
+        </div>
+    
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Cập nhật Sản Phẩm</button>
     </form>
+
     <!-- Hiển thị thông báo lỗi chung -->
     @if (ViewBag.ErrorMessages != null)
     {

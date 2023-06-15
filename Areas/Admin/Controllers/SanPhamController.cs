@@ -190,48 +190,45 @@ public class SanPhamController : Controller
         return View(SanPham);
     }
 
+
     [HttpPost]
-    public async Task<IActionResult> EditSP(SanPham updatedSanPhams, ChiTietSanPham ctsp)
+public async Task<IActionResult> EditSP(SanPham updatedSanPham, ChiTietSanPham updatedChiTietSanPham)
+{
+    if (ModelState.IsValid)
     {
-        if (ModelState.IsValid)
+        try
         {
-            try
+            var existingSanPham = await _context.SanPhams.FindAsync(updatedSanPham.Id);
+            var existingCTSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(r => r.IdSP == existingSanPham.Id);
+
+            if (existingSanPham == null || existingCTSP == null)
             {
-                var existingSanPham = await _context.SanPhams.FindAsync(updatedSanPhams.Id);
-                var existingCTSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(r => r.IdSP == existingSanPham.Id);
-
-                if (existingSanPham == null || existingCTSP == null)
-                {
-                    return NotFound();
-                }
-
-                existingSanPham.MaSP = updatedSanPhams.MaSP;
-                existingSanPham.TenSP = updatedSanPhams.TenSP;
-                existingSanPham.MoTaSP = updatedSanPhams.MoTaSP;
-                existingSanPham.GiaBan = updatedSanPhams.GiaBan;
-                existingSanPham.GiaNhap = updatedSanPhams.GiaNhap;
-                existingSanPham.SoLuongNhap = updatedSanPhams.SoLuongNhap;
-                existingSanPham.SoLuongTon = updatedSanPhams.SoLuongTon;
-                existingSanPham.XuatSu = updatedSanPhams.XuatSu;
-
-                existingCTSP.IdLop = ctsp.IdLop;
-                existingCTSP.IdTheLoai = ctsp.IdTheLoai;
-                existingCTSP.IdThuongHieu = ctsp.IdThuongHieu;
-
-
-                await _context.SaveChangesAsync();
-                return RedirectToAction("DanhSachSanPham", "SanPham");
+                return NotFound();
             }
-            catch (Exception)
-            {
+            existingSanPham.MaSP = updatedSanPham.MaSP;
+            existingSanPham.TenSP = updatedSanPham.TenSP;
+            existingSanPham.MoTaSP = updatedSanPham.MoTaSP;
+            existingSanPham.GiaBan = updatedSanPham.GiaBan;
+            existingSanPham.GiaNhap = updatedSanPham.GiaNhap;
+            existingSanPham.SoLuongNhap = updatedSanPham.SoLuongNhap;
+            existingSanPham.SoLuongTon = updatedSanPham.SoLuongTon;
+            existingSanPham.XuatSu = updatedSanPham.XuatSu;
 
-                return BadRequest("Lỗi");
+            existingCTSP.IdLop = updatedChiTietSanPham.IdLop;
+            existingCTSP.IdTheLoai = updatedChiTietSanPham.IdTheLoai;
+            existingCTSP.IdThuongHieu = updatedChiTietSanPham.IdThuongHieu;
 
-            }
+            await _context.SaveChangesAsync();
+            return RedirectToAction("DanhSachSanPham", "SanPham");
         }
-
-        return RedirectToAction("DanhSachSanPham", "SanPham");
+        catch (Exception)
+        {
+            return BadRequest("Lỗi");
+        }
     }
+    return BadRequest("Lỗi");
+}
+
 
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
