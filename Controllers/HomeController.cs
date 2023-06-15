@@ -46,6 +46,7 @@ public class HomeController : Controller
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         var currentUser = await _userManager.GetUserAsync(User);
+        // ViewBag.user = currentUser.UserName;
 
         // Lấy danh sách sản phẩm trong giỏ hàng của người dùng hiện tại
         var cartProducts = _context.GioHangs
@@ -135,7 +136,10 @@ public class HomeController : Controller
         // Chuyển hướng đến trang giỏ hàng
         return RedirectToAction("Cart");
     }
+
     [Authorize]
+    [HttpPost]
+
     public async Task<IActionResult> DecreaCart(int SanPhamId)
     {
         // Lấy thông tin người dùng hiện tại
@@ -166,11 +170,13 @@ public class HomeController : Controller
     }
 
     [Authorize]
+    [HttpPost]
     public async Task<IActionResult> IncreaCart(int SanPhamId)
     {
         // Lấy thông tin người dùng hiện tại
         ApplicationUser user = await _userManager.GetUserAsync(User);
 
+        ViewBag.user = user.UserName;
         // Truy xuất giỏ hàng của người dùng từ nguồn dữ liệu (ví dụ: cơ sở dữ liệu)
         var cart = _context.GioHangs.SingleOrDefault(c => c.UserId == user.Id && c.SanPhamId == SanPhamId);
 
@@ -179,11 +185,11 @@ public class HomeController : Controller
         {
             // Tăng số lượng sản phẩm trong giỏ hàng
             cart.SoLuong++;
-            _context.SaveChanges();
+            _context.SaveChanges(); 
         }
 
         // Chuyển hướng về trang giỏ hàng
-        return RedirectToAction("Cart");
+        return RedirectToAction("Cart","Home");
     }
 
 

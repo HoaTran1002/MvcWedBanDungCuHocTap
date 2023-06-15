@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MvcWedBanDungCuHocTap.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreateNew : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

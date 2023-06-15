@@ -12,8 +12,8 @@ using MvcWedBanDungCuHocTap.Models;
 namespace MvcWedBanDungCuHocTap.Migrations
 {
     [DbContext(typeof(DbApplicationContext))]
-    [Migration("20230613093006_InitialCreateNew")]
-    partial class InitialCreateNew
+    [Migration("20230615082045_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
