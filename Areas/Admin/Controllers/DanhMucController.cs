@@ -88,7 +88,6 @@ public class DanhMucController : Controller
             Id = danhmuc.Id,
             TenDM = danhmuc.TenDM
         };
-
         return View(viewModel);
     }
 
@@ -118,7 +117,6 @@ public class DanhMucController : Controller
 
         return View(updatedDanhMuc);
     }
-
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {
