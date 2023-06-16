@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -83,9 +82,13 @@ public class HomeController : Controller
 
         // Tính toán thanh toán tổng (ví dụ)
         decimal phiVanChuyen = 10000; // Giả sử phí vận chuyển là 10,000 đ
+        if (tongTien <= 0)
+        {
+            phiVanChuyen = 0;
+        }
         decimal thanhToanTong = tongTien + phiVanChuyen;
         ViewBag.ThanhToanTong = thanhToanTong;
-
+        ViewBag.VanChuyen = phiVanChuyen;
         return View(cartList);
     }
 
@@ -117,9 +120,11 @@ public class HomeController : Controller
         return RedirectToAction("Cart");
     }
     [Authorize]
-    public async Task<IActionResult> DeleteCart(int SanPhamId)
+    [HttpPost]
+    public async Task<IActionResult> DeleteCart(int? SanPhamId)
     {
-        SanPhamId++;
+
+        Console.WriteLine("iddd sppp===>>" + SanPhamId);
         // Lấy thông tin người dùng hiện tại
         var currentUser = await _userManager.GetUserAsync(User);
 
@@ -138,10 +143,11 @@ public class HomeController : Controller
     }
 
     [Authorize]
-    [HttpPost]
+
 
     public async Task<IActionResult> DecreaCart(int SanPhamId)
     {
+        SanPhamId++;
         // Lấy thông tin người dùng hiện tại
         ApplicationUser user = await _userManager.GetUserAsync(User);
 
@@ -170,9 +176,11 @@ public class HomeController : Controller
     }
 
     [Authorize]
-    [HttpPost]
+
     public async Task<IActionResult> IncreaCart(int SanPhamId)
     {
+        SanPhamId++;
+
         // Lấy thông tin người dùng hiện tại
         ApplicationUser user = await _userManager.GetUserAsync(User);
 
@@ -185,11 +193,11 @@ public class HomeController : Controller
         {
             // Tăng số lượng sản phẩm trong giỏ hàng
             cart.SoLuong++;
-            _context.SaveChanges(); 
+            _context.SaveChanges();
         }
 
         // Chuyển hướng về trang giỏ hàng
-        return RedirectToAction("Cart","Home");
+        return RedirectToAction("Cart", "Home");
     }
 
 

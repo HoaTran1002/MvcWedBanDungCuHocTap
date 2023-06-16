@@ -6,10 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using MvcWedBanSach.Models;
 using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize]
 public class LopController : Controller
 {
     private readonly ILogger<LopController> _logger;

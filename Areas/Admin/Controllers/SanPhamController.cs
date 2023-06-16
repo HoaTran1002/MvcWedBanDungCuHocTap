@@ -2,15 +2,13 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MvcWedBanDungCuHocTap.Models;
 using MvcWedBanSach.Models;
-using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
-
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize]
 public class SanPhamController : Controller
 {
     private readonly ILogger<SanPhamController> _logger;
@@ -144,12 +142,12 @@ public class SanPhamController : Controller
             if (SanPhamRemove != null)
             {
                 _context.SanPhams.Remove(SanPhamRemove);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
             //xoá hình ảnh
             HinhAnh anhD = _context.HinhAnhs.First(ha => ha.IdSP == Id);
             _context.HinhAnhs.Where(ha => ha.IdSP == Id).ExecuteDelete();
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
 
 
@@ -192,42 +190,42 @@ public class SanPhamController : Controller
 
 
     [HttpPost]
-public async Task<IActionResult> EditSP(SanPham updatedSanPham, ChiTietSanPham updatedChiTietSanPham)
-{
-    if (ModelState.IsValid)
+    public async Task<IActionResult> EditSP(SanPham updatedSanPham, ChiTietSanPham updatedChiTietSanPham)
     {
-        try
+        if (ModelState.IsValid)
         {
-            var existingSanPham = await _context.SanPhams.FindAsync(updatedSanPham.Id);
-            var existingCTSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(r => r.IdSP == existingSanPham.Id);
-
-            if (existingSanPham == null || existingCTSP == null)
+            try
             {
-                return NotFound();
+                var existingSanPham = await _context.SanPhams.FindAsync(updatedSanPham.Id);
+                var existingCTSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(r => r.IdSP == existingSanPham.Id);
+
+                if (existingSanPham == null || existingCTSP == null)
+                {
+                    return NotFound();
+                }
+                existingSanPham.MaSP = updatedSanPham.MaSP;
+                existingSanPham.TenSP = updatedSanPham.TenSP;
+                existingSanPham.MoTaSP = updatedSanPham.MoTaSP;
+                existingSanPham.GiaBan = updatedSanPham.GiaBan;
+                existingSanPham.GiaNhap = updatedSanPham.GiaNhap;
+                existingSanPham.SoLuongNhap = updatedSanPham.SoLuongNhap;
+                existingSanPham.SoLuongTon = updatedSanPham.SoLuongTon;
+                existingSanPham.XuatSu = updatedSanPham.XuatSu;
+
+                existingCTSP.IdLop = updatedChiTietSanPham.IdLop;
+                existingCTSP.IdTheLoai = updatedChiTietSanPham.IdTheLoai;
+                existingCTSP.IdThuongHieu = updatedChiTietSanPham.IdThuongHieu;
+
+                await _context.SaveChangesAsync();
+                return RedirectToAction("DanhSachSanPham", "SanPham");
             }
-            existingSanPham.MaSP = updatedSanPham.MaSP;
-            existingSanPham.TenSP = updatedSanPham.TenSP;
-            existingSanPham.MoTaSP = updatedSanPham.MoTaSP;
-            existingSanPham.GiaBan = updatedSanPham.GiaBan;
-            existingSanPham.GiaNhap = updatedSanPham.GiaNhap;
-            existingSanPham.SoLuongNhap = updatedSanPham.SoLuongNhap;
-            existingSanPham.SoLuongTon = updatedSanPham.SoLuongTon;
-            existingSanPham.XuatSu = updatedSanPham.XuatSu;
-
-            existingCTSP.IdLop = updatedChiTietSanPham.IdLop;
-            existingCTSP.IdTheLoai = updatedChiTietSanPham.IdTheLoai;
-            existingCTSP.IdThuongHieu = updatedChiTietSanPham.IdThuongHieu;
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction("DanhSachSanPham", "SanPham");
+            catch (Exception)
+            {
+                return BadRequest("Lỗi");
+            }
         }
-        catch (Exception)
-        {
-            return BadRequest("Lỗi");
-        }
+        return BadRequest("Lỗi");
     }
-    return BadRequest("Lỗi");
-}
 
 
     [HttpGet]

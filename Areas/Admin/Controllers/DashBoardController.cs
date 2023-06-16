@@ -1,9 +1,11 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MvcWedBanSach.Models;
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
 public class DashBoardController : Controller
 {
     private readonly ILogger<DashBoardController> _logger;

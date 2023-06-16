@@ -1,15 +1,12 @@
-using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
 using MvcWedBanDungCuHocTap.Models;
-using Microsoft.EntityFrameworkCore;
-
-using MvcWedBanSach.Models;
-using Microsoft.AspNetCore.Hosting;
-using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize]
 public class ThuongHieuController : Controller
 {
     private readonly ILogger<ThuongHieuController> _logger;
