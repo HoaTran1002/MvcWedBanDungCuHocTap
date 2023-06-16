@@ -4,10 +4,12 @@ using MvcWedBanDungCuHocTap.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MvcWedBanDungCuHocTap.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
 public class DanhMucController : Controller
 {
     private readonly ILogger<DanhMucController> _logger;
@@ -88,7 +90,6 @@ public class DanhMucController : Controller
             Id = danhmuc.Id,
             TenDM = danhmuc.TenDM
         };
-
         return View(viewModel);
     }
 
@@ -118,7 +119,6 @@ public class DanhMucController : Controller
 
         return View(updatedDanhMuc);
     }
-
     [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {

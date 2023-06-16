@@ -1,13 +1,6 @@
 @{
     Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
 
-
-
-
-
-
-
-
 }
 
 <div>
@@ -16,9 +9,6 @@
         <div class="row">
             <div class="col-12">
                 <table class="table table-image">
-
-
-
                     <thead>
                         <tr>
                         <th scope="col">ID</th>
@@ -30,48 +20,40 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @* Thay đổi chỗ này nè *@
                         @foreach (var item in ViewBag.ListSp)
                         {
-                                            <tr>
-                                                <th scope="row">@item.SanPham.Id</th>
-                                                <td class="w-25">
-                                                    <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
-                                                </td>
-                                                <td>@item.SanPham.TenSP</td>
-                                                <td>
-                                                    <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
-                                                        <i class="text-danger bi bi-trash"></i>
-                                                    </a>
-                                                    <a class="icon-link-hover" href="/Admin/SanPham/EditSP/@item.SanPham.Id" style="font-size: 20px; margin:10px;">
-                                                        <i class="bi bi-pencil-square"></i>
-                                                    </a>
+                            <tr>
 
-                                                </td>
-                                                <td>@item.SanPham.GiaBan</td>
-                                                <td>@item.SanPham.SoLuongNhap</td>
-                                @* tạo form ẩn *@
-                                                <form id="myForm" method="POST" action="XoaSanPham">
-                                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                                </form>  
-                                                <form id="myFormEdit" method="Get" action="SuaSanPham">
-                                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                                </form>  
-                                                <form id="myFormDetail" method="POST" action="XemChiTiet">
-                                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                                </form>  
-                                            </tr>
+                                <th scope="row">@item.SanPham.Id</th>
+                                <td class="w-25">
+                                    <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
+                                </td>
+                                <td>@item.SanPham.TenSP</td>
+                                <td>
+                                    <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
+                                        <i class="text-danger bi bi-trash"></i>
+                                    </a>
+                                    <a class="icon-link-hover" href="/Admin/SanPham/EditSP/@item.SanPham.Id" style="font-size: 20px; margin:10px;">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+
+                                </td>
+                                <td>@item.SanPham.GiaBan</td>
+                                <td>@item.SanPham.SoLuongNhap</td>
+@* tạo form ẩn *@
+                                <form id="myForm" method="POST" action="XoaSanPham">
+                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                </form>  
+                                <form id="myFormEdit" method="Get" action="SuaSanPham">
+                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                </form>  
+                                <form id="myFormDetail" method="POST" action="XemChiTiet">
+                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                </form>  
+                            </tr>
                         }
-
-
-
                     </tbody>
                 </table> 
-
-
-                    </tbody>
-                </table> 
-
             </div>
         </div>
     </div>    

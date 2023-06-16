@@ -3,6 +3,7 @@
     var cartList = ViewBag.carts;
     var TongTien = ViewBag.TongTien;
     var ThanhToanTong = ViewBag.ThanhToanTong;
+    var PhiVanChuyen = ViewBag.VanChuyen;
 }
 
 
@@ -22,36 +23,46 @@
                 <tbody class="align-middle">
                     @foreach (var item in cartList)
                     {
+                       
                         <tr>
                             <td class="align-middle">@item.TenSP</td>
                             <td class="align-middle">@item.GiaBan.ToString("N0")đ</td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <a href="/Home/DecreaCart/@item.SanPhamId" class="btn btn-sm text-dark p-0">
+
+                                    <form method="post" action="/Home/DecreaCart" class="btn btn-sm text-dark p-0">
+                                    <input type="hidden" name="SanPhamId" value="@item.SanPhamId" />
+                                   
                                         <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-primary btn-minus">
+                                             <button type="submit" class="btn btn-sm btn-primary">
                                                 <i class="fa fa-minus"></i>
                                             </button>
                                         </div>
-                                    </a>
+                                    </form>
                                     <input type="text" class="form-control form-control-sm bg-secondary text-center" value="@item.SoLuong">
-                                    <a href="/Home/IncreaCart/@item.SanPhamId" class="btn btn-sm text-dark p-0">
+                                    
+                                    <form method="post" action="/Home/IncreaCart" class="btn btn-sm text-dark p-0">
+                                    <input type="hidden" name="SanPhamId" value="@item.SanPhamId" />
+                                   
                                         <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-primary btn-plus">
+                                             <button type="submit" class="btn btn-sm btn-primary">
                                                 <i class="fa fa-plus"></i>
                                             </button>
                                         </div>
-                                    </a>
+                                    </form>
                                 </div>
                             </td>
                             <td class="align-middle">@item.TongTien.ToString("N0")đ</td>
                             <td class="align-middle">
-                                <a href="/Home/DeleteCart/@item.SanPhamId" class="btn btn-sm text-dark p-0">
-                                    <button class="btn btn-sm btn-primary">
-                                        <i class="fa fa-times"></i>
-                                    </button>
-                                </a>
-
+                                <form method="post" action="/Home/DeleteCart" class="btn btn-sm text-dark p-0">
+                                    <input type="hidden" name="SanPhamId" value="@item.SanPhamId" />
+                                   
+                                        <div class="input-group-btn">
+                                             <button type="submit" class="btn btn-sm btn-primary">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                        </div>
+                                </form>
                                 
                             </td>
                         </tr>
@@ -71,7 +82,7 @@
                         </div>
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-medium">Phí vận chuyển</h6>
-                            <h6 class="font-weight-medium">10,000đ</h6>
+                            <h6 class="font-weight-medium">@PhiVanChuyen</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
