@@ -282,6 +282,26 @@ public class HomeController : Controller
         return View("Shop");
     }
 
+    [HttpGet]
+    public async Task<IActionResult> Shop(int p)
+    {
+        ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        var TotlaProducts = _context.SanPhams.ToList().Count;
+        int ItemInPage = 6;
+        int page = p >= 1 ? p : 1;
+        ViewBag.CurrentPage = page;
+        int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage) ;
+        int productInPage = (page -1 )*ItemInPage;
+        ViewBag.numberPage = TotalPage;
+        var products = (from a in _context.SanPhams
+                        join b in _context.HinhAnhs on a.Id equals b.IdSP
+                        select new { SanPham = a, HinhAnh = b })
+                        .Skip(productInPage).Take(ItemInPage)
+                        .ToList();
+
+        ViewBag.ListSp = products;
+        return View("Shop");
+    }
     [HttpPost]
     public async Task<IActionResult> ShopFilter(string priceFilter)
     {

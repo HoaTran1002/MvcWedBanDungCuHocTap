@@ -75,7 +75,7 @@ namespace MvcWedBanDungCuHocTap.Controllers
         //}
 
         [Authorize]
-
+        [HttpGet]
         public IActionResult ChangePassword()
         {
             return View();
