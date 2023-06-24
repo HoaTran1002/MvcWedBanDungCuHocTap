@@ -20,9 +20,9 @@ public class HomeController : Controller
         _context = context;
         _userManager = userManager;
         danhMucSanPhams = _context.DanhMucSanPhams.ToList<DanhMucSanPham>();
-
+        
     }
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         var query = (from a in _context.SanPhams
@@ -38,6 +38,13 @@ public class HomeController : Controller
                            SoLuongSanPham = sanPhamGroup.Count()
                        }).ToList();
         ViewBag.listDM = queryDM;
+
+
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
     [Authorize]
@@ -89,6 +96,10 @@ public class HomeController : Controller
         decimal thanhToanTong = tongTien + phiVanChuyen;
         ViewBag.ThanhToanTong = thanhToanTong;
         ViewBag.VanChuyen = phiVanChuyen;
+
+
+        
+        ViewBag.NumberCart= cartProducts.Count -1;
         return View(cartList);
     }
 
@@ -202,43 +213,92 @@ public class HomeController : Controller
 
 
     [Authorize]
-    public IActionResult Checkout()
+    public async Task<IActionResult> Checkout()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
-    public IActionResult Contact()
+    public async Task<IActionResult> Contact()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
 
-    public IActionResult Search(string keysearch)
+    [HttpGet]
+    [HttpPost]
+    public async Task<IActionResult> Search(string keysearch,int p)
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        int ItemInPage = 8;
+        int page = p >= 1 ? p : 1;
+        int productInPage = (page -1 )*ItemInPage;
         var products = (from a in _context.SanPhams
                         join b in _context.HinhAnhs on a.Id equals b.IdSP
                         select new { SanPham = a, HinhAnh = b })
-            .Where(p => p.SanPham.TenSP.Contains(keysearch))
-            .ToList();
+                        .Where(p => p.SanPham.TenSP.Contains(keysearch))
+                        .Skip(productInPage).Take(ItemInPage)
+                        .ToList();
+        var TotlaProducts = products.Count;
+        int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage) ;
+
+        ViewBag.CurrentPage = page;
+        ViewBag.ItemInPage = ItemInPage;
+        ViewBag.numberPage = TotalPage;
         ViewBag.keysearch = keysearch;
         ViewBag.ListSp = products;
+
+
+
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
-
-    public IActionResult ListProductType(int id)
+    
+    [HttpGet]
+    public async Task<IActionResult> ListProductType(int id,int p)
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        int ItemInPage = 8;
+        int page = p >= 1 ? p : 1;
+        int productInPage = (page -1 )*ItemInPage;
         var products = (from a in _context.SanPhams
                         join b in _context.HinhAnhs on a.Id equals b.IdSP
                         select new { SanPham = a, HinhAnh = b })
-            .Where(p => p.SanPham.IdDanhMucSanPham == id)
-            .ToList();
+                        .Where(p => p.SanPham.IdDanhMucSanPham == id)
+                        .Skip(productInPage).Take(ItemInPage)
+                        .ToList();
+        var TotlaProducts = products.Count;
+        int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage) ;
+
+        ViewBag.CurrentPage = page;
+        ViewBag.ItemInPage = ItemInPage;
+        ViewBag.numberPage = TotalPage;
         ViewBag.ListSp = products;
+        
+        
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
-
-    public IActionResult Detail(int? id)
+    public async Task<IActionResult> Detail(int? id)
     {
         if (id == null)
         {
@@ -256,9 +316,15 @@ public class HomeController : Controller
                      select new { SanPham = a, HinhAnh = b, ThuongHieu = d, TheLoai = e, Lop = f, DanhMuc = g }).FirstOrDefault();
         ViewBag.SanPham = query;
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
+        
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
-    public IActionResult Shop()
+    public async Task<IActionResult> Shop()
     {
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
         var products = (from a in _context.SanPhams
@@ -266,6 +332,13 @@ public class HomeController : Controller
                         select new { SanPham = a, HinhAnh = b })
             .ToList();
         ViewBag.ListSp = products;
+
+
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View();
     }
 
@@ -279,6 +352,11 @@ public class HomeController : Controller
             .Where(p => p.SanPham.TenSP.Contains(keysearch))
             .ToList();
         ViewBag.ListSp = products;
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View("Shop");
     }
 
@@ -289,17 +367,25 @@ public class HomeController : Controller
         var TotlaProducts = _context.SanPhams.ToList().Count;
         int ItemInPage = 6;
         int page = p >= 1 ? p : 1;
-        ViewBag.CurrentPage = page;
         int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage) ;
         int productInPage = (page -1 )*ItemInPage;
-        ViewBag.numberPage = TotalPage;
         var products = (from a in _context.SanPhams
                         join b in _context.HinhAnhs on a.Id equals b.IdSP
                         select new { SanPham = a, HinhAnh = b })
                         .Skip(productInPage).Take(ItemInPage)
                         .ToList();
 
+        ViewBag.CurrentPage = page;
+        ViewBag.ItemInPage = ItemInPage;
+        ViewBag.numberPage = TotalPage;
         ViewBag.ListSp = products;
+
+
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View("Shop");
     }
     [HttpPost]
@@ -339,6 +425,11 @@ public class HomeController : Controller
                         .ToList();
 
         ViewBag.ListSp = products;
+        var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+            .Where(giohang => giohang.UserId == currentUser.Id)
+            .ToList().Count;
+        ViewBag.NumberCart= cartProducts-1;
         return View("Shop");
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KgOVuAGX9QlSgP/LcN92355xJ6PRkim4kcNev0M5g70=",
+  "Hash": "4C5QxnmCBizN5ZvdWrQ4BgPPaJz4J1J6ZeFdh/dSWhw=",
   "Source": "MvcWedBanDungCuHocTap",
   "BasePath": "_content/MvcWedBanDungCuHocTap",
   "Mode": "Default",
@@ -1615,6 +1615,23 @@
       "OriginalItemSpec": "wwwroot\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231522518235638211.jpg"
     },
     {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231914807.jpg",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231914807.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231914807.jpg"
+    },
+    {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\auth\\lockscreen-bg.jpg",
       "SourceId": "MvcWedBanDungCuHocTap",
       "SourceType": "Discovered",
@@ -3145,6 +3162,23 @@
       "OriginalItemSpec": "wwwroot\\img\\file-icons\\64\\008-archive.png"
     },
     {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\KASTUDY231948960.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/KASTUDY231948960.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\KASTUDY231948960.png"
+    },
+    {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\kk-removebg-preview235829823.png",
       "SourceId": "MvcWedBanDungCuHocTap",
       "SourceType": "Discovered",
@@ -4452,6 +4486,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\vendor-8.jpg"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg2231836147.jpg",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/webkastudy-bg2231836147.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\webkastudy-bg2231836147.jpg"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg9235257071.jpg",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/webkastudy-bg9235257071.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\webkastudy-bg9235257071.jpg"
     },
     {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\js\\ace.js",

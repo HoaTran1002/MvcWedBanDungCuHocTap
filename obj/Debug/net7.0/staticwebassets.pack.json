@@ -373,6 +373,14 @@
       "PackagePath": "staticwebassets\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231522518235638211.jpg"
     },
     {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231914807.jpg",
+      "PackagePath": "staticwebassets\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231914807.jpg"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\KASTUDY231948960.png",
+      "PackagePath": "staticwebassets\\img\\KASTUDY231948960.png"
+    },
+    {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\img\\auth\\lockscreen-bg.jpg"
     },
@@ -1039,6 +1047,14 @@
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\vendor-8.jpg",
       "PackagePath": "staticwebassets\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg2231836147.jpg",
+      "PackagePath": "staticwebassets\\img\\webkastudy-bg2231836147.jpg"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg9235257071.jpg",
+      "PackagePath": "staticwebassets\\img\\webkastudy-bg9235257071.jpg"
     },
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\js\\Chart.roundedBarCharts.js",

@@ -31,6 +31,65 @@
                     </div>
                 </div>
             }
+            <div class="col-12 pb-1">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center mb-3">
+                            @if (ViewBag.CurrentPage == 1)
+                            {
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="/Home/ListProductType?id=@ViewBag.IdType&p=@(ViewBag.CurrentPage)" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="/Home/ListProductType?id=@ViewBag.IdType&p=@(ViewBag.CurrentPage - 1)"
+                                        aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                            }
+                            @for (int i = 1; i <= ViewBag.numberPage; i++)
+                            {
+                                if (ViewBag.CurrentPage == i)
+                                {
+                                    <li class="page-item active">
+                                        <a class="page-link" href="/Home/ListProductType?id=@ViewBag.IdType&p=@i">@i</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="/Home/ListProductType?id=@ViewBag.IdType&p=@i">@i</a>
+                                    </li>
+                                }
+                            }
+                            @if (ViewBag.CurrentPage == ViewBag.numberPage)
+                            {
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="/Home/ListProductType?id=@ViewBag.IdType&p=@(ViewBag.CurrentPage)" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="/Home/ListProductType?id=@ViewBag.IdType&p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+
+                    </nav>
+            </div>
         }
     </div>
 </div>
