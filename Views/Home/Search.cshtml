@@ -42,7 +42,7 @@
                             @if (ViewBag.CurrentPage == 1)
                             {
                                 <li class="page-item disabled">
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage)" aria-label="Previous">
+                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage)" aria-label="Previous">
                                         <span aria-hidden="true">«</span>
                                         <span class="sr-only">Previous</span>
                                     </a>
@@ -51,7 +51,7 @@
                             else
                             {
                                 <li class="page-item">
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage - 1)"
+                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage - 1)"
                                         aria-label="Previous">
                                         <span aria-hidden="true">«</span>
                                         <span class="sr-only">Previous</span>
@@ -63,20 +63,20 @@
                                 if (ViewBag.CurrentPage == i)
                                 {
                                     <li class="page-item active">
-                                        <a class="page-link" href="/Home/Search?p=@i">@i</a>
+                                        <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@i">@i</a>
                                     </li>
                                 }
                                 else
                                 {
                                     <li class="page-item">
-                                        <a class="page-link" href="/Home/Search?p=@i">@i</a>
+                                        <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@i">@i</a>
                                     </li>
                                 }
                             }
                             @if (ViewBag.CurrentPage == ViewBag.numberPage)
                             {
                                 <li class="page-item disabled">
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage)" aria-label="Next">
+                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage)" aria-label="Next">
                                         <span aria-hidden="true">»</span>
                                         <span class="sr-only">Next</span>
                                     </a>
@@ -85,7 +85,7 @@
                             else
                             {
                                 <li class="page-item">
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
+                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
                                         <span aria-hidden="true">»</span>
                                         <span class="sr-only">Next</span>
                                     </a>
