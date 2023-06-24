@@ -1,7 +1,0 @@
-﻿<Project>
-<<<<<<< HEAD
-  <Import Project="..\build\MvcWedBanDungCuHocTap.props" />
-=======
-  <Import Project="../build/MvcWedBanDungCuHocTap.props" />
->>>>>>> 2ff597c (adđ all)
-</Project>

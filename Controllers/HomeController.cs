@@ -242,14 +242,7 @@ public class HomeController : Controller
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
 
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View();
     }
     public async Task<IActionResult> Contact()
@@ -257,14 +250,7 @@ public class HomeController : Controller
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
 
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View();
     }
 
@@ -363,23 +349,9 @@ public class HomeController : Controller
         ViewBag.ItemInPage = ItemInPage;
         ViewBag.numberPage = TotalPage;
         ViewBag.ListSp = products;
-<<<<<<< HEAD
-        ViewBag.TotlaProducts = productsItem;
-        
-        
-=======
-
-
->>>>>>> 2ff597c (adđ all)
+ViewBag.TotlaProducts = productsItem;
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View();
     }
     public async Task<IActionResult> Detail(int? id)
@@ -400,20 +372,9 @@ public class HomeController : Controller
                      select new { SanPham = a, HinhAnh = b, ThuongHieu = d, TheLoai = e, Lop = f, DanhMuc = g }).FirstOrDefault();
         ViewBag.SanPham = query;
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> 2ff597c (adđ all)
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View();
     }
     public async Task<IActionResult> Shop()
@@ -427,14 +388,7 @@ public class HomeController : Controller
 
 
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View();
     }
 
@@ -449,14 +403,7 @@ public class HomeController : Controller
             .ToList();
         ViewBag.ListSp = products;
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View("Shop");
     }
 
@@ -467,13 +414,8 @@ public class HomeController : Controller
         var TotlaProducts = _context.SanPhams.ToList().Count;
         int ItemInPage = 6;
         int page = p >= 1 ? p : 1;
-<<<<<<< HEAD
-        int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage) ;
-        int productInPage = (page -1 )*ItemInPage;
-=======
-        int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage);
+int TotalPage = (int)Math.Ceiling((double)TotlaProducts / ItemInPage);
         int productInPage = (page - 1) * ItemInPage;
->>>>>>> 2ff597c (adđ all)
         var products = (from a in _context.SanPhams
                         join b in _context.HinhAnhs on a.Id equals b.IdSP
                         select new { SanPham = a, HinhAnh = b })
@@ -487,14 +429,7 @@ public class HomeController : Controller
 
 
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View("Shop");
     }
     [HttpPost]
@@ -535,14 +470,7 @@ public class HomeController : Controller
 
         ViewBag.ListSp = products;
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-<<<<<<< HEAD
-        // ViewBag.NumberCart= cartProducts-1;
-=======
-        // ViewBag.NumberCart = cartProducts - 1;
->>>>>>> 2ff597c (adđ all)
+
         return View("Shop");
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
