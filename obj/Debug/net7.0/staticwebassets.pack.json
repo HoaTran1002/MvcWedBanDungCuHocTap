@@ -377,6 +377,10 @@
       "PackagePath": "staticwebassets\\img\\1920x1080hoc-phi-dai-hoc-van-lang-2022-2023231914807.jpg"
     },
     {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\KASTUDY-removebg-preview232525175.png",
+      "PackagePath": "staticwebassets\\img\\KASTUDY-removebg-preview232525175.png"
+    },
+    {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\KASTUDY231948960.png",
       "PackagePath": "staticwebassets\\img\\KASTUDY231948960.png"
     },
@@ -401,12 +405,20 @@
       "PackagePath": "staticwebassets\\img\\bg-decoration-2.png"
     },
     {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\bg-face232631960.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-face232631960.jpg"
+    },
+    {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\bronze-removebg-preview235132857.png",
       "PackagePath": "staticwebassets\\img\\bronze-removebg-preview235132857.png"
     },
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\bronze-removebg-preview235517941.png",
       "PackagePath": "staticwebassets\\img\\bronze-removebg-preview235517941.png"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\capnhap232330749.png",
+      "PackagePath": "staticwebassets\\img\\capnhap232330749.png"
     },
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\carousel-1.jpg",
@@ -495,6 +507,10 @@
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\dashboard\\weather-card.jpg",
       "PackagePath": "staticwebassets\\img\\dashboard\\weather-card.jpg"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\delete232555989.png",
+      "PackagePath": "staticwebassets\\img\\delete232555989.png"
     },
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\faces\\face1.jpg",
@@ -739,6 +755,14 @@
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\file-icons\\64\\008-archive.png",
       "PackagePath": "staticwebassets\\img\\file-icons\\64\\008-archive.png"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\gold232355642.png",
+      "PackagePath": "staticwebassets\\img\\gold232355642.png"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\gold232421607.png",
+      "PackagePath": "staticwebassets\\img\\gold232421607.png"
     },
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\kk-removebg-preview235829823.png",
@@ -1047,6 +1071,10 @@
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\vendor-8.jpg",
       "PackagePath": "staticwebassets\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg1232452441.jpg",
+      "PackagePath": "staticwebassets\\img\\webkastudy-bg1232452441.jpg"
     },
     {
       "Id": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg2231836147.jpg",
