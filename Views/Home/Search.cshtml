@@ -8,117 +8,121 @@
         </div>
     </div>
     <div class="row">
-        @if(ViewBag.ListSp.Count== 0){
-            <div class="col-lg-12">Sản phẩm bạn tìm kiếm không tồn tại</div>
-        }else{
-            foreach(var item in ViewBag.ListSp){
-                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                    <div class="card product-item border-0 mb-4">
-                        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                            <img class="img-fluid img-item-product w-100" src="~/@item.HinhAnh.HinhAnhSP" alt="hình ảnh sản phẩm">
-                        </div>
-                        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                            <h6 class="text-truncate mb-3">@item.SanPham.TenSP</h6>
-                            <div class="d-flex justify-content-center">
-                                <h6>@item.SanPham.GiaBan VND</h6>
-                            </div>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="/Home/Detail/@item.SanPham.Id" class="btn btn-sm text-dark p-0">
-                                <i class="fas fa-eye text-primary mr-1"></i>
-                                Xem chi tiết
-                            </a>
-                            <a href="" class="btn btn-sm text-dark p-0"><i
-                                    class="fas fa-shopping-cart text-primary mr-1"></i>
-                                    Thêm vào giỏ hàng
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        @if (ViewBag.ListSp.Count == 0)
+        {
+                    <div class="col-lg-12">Sản phẩm bạn tìm kiếm không tồn tại</div>
+        }
+        else
+        {
+            foreach (var item in ViewBag.ListSp)
+            {
+                                <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                                    <div class="card product-item border-0 mb-4">
+                                        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                                            <img class="img-fluid img-item-product w-100" src="~/@item.HinhAnh.HinhAnhSP" alt="hình ảnh sản phẩm">
+                                        </div>
+                                        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                            <h6 class="text-truncate mb-3">@item.SanPham.TenSP</h6>
+                                            <div class="d-flex justify-content-center">
+                                                <h6>@item.SanPham.GiaBan VND</h6>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-between bg-light border">
+                                            <a href="/Home/Detail/@item.SanPham.Id" class="btn btn-sm text-dark p-0">
+                                                <i class="fas fa-eye text-primary mr-1"></i>
+                                                Xem chi tiết
+                                            </a>
+                                            <a href="" class="btn btn-sm text-dark p-0"><i
+                                                    class="fas fa-shopping-cart text-primary mr-1"></i>
+                                                    Thêm vào giỏ hàng
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
             }
-            <div class="col-12 pb-1">
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination justify-content-center mb-3">
-                            @if (ViewBag.CurrentPage == 1)
-                            {
-                                <li class="page-item disabled">
-<<<<<<< HEAD
-                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage)" aria-label="Previous">
-=======
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage)" aria-label="Previous">
->>>>>>> 2ff597c (adđ all)
-                                        <span aria-hidden="true">«</span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="page-item">
-<<<<<<< HEAD
-                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage - 1)"
-=======
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage - 1)"
->>>>>>> 2ff597c (adđ all)
-                                        aria-label="Previous">
-                                        <span aria-hidden="true">«</span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                </li>
-                            }
-                            @for (int i = 1; i <= ViewBag.numberPage; i++)
-                            {
-                                if (ViewBag.CurrentPage == i)
-                                {
-                                    <li class="page-item active">
-<<<<<<< HEAD
-                                        <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@i">@i</a>
-=======
-                                        <a class="page-link" href="/Home/Search?p=@i">@i</a>
->>>>>>> 2ff597c (adđ all)
-                                    </li>
-                                }
-                                else
-                                {
-                                    <li class="page-item">
-<<<<<<< HEAD
-                                        <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@i">@i</a>
-=======
-                                        <a class="page-link" href="/Home/Search?p=@i">@i</a>
->>>>>>> 2ff597c (adđ all)
-                                    </li>
-                                }
-                            }
-                            @if (ViewBag.CurrentPage == ViewBag.numberPage)
-                            {
-                                <li class="page-item disabled">
-<<<<<<< HEAD
-                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage)" aria-label="Next">
-=======
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage)" aria-label="Next">
->>>>>>> 2ff597c (adđ all)
-                                        <span aria-hidden="true">»</span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="page-item">
-<<<<<<< HEAD
-                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
-=======
-                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
->>>>>>> 2ff597c (adđ all)
-                                        <span aria-hidden="true">»</span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </li>
-                            }
-                        </ul>
+                    <div class="col-12 pb-1">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center mb-3">
+                        @if (ViewBag.CurrentPage == 1)
+                        {
+                                                <li class="page-item disabled">
 
-                    </nav>
-            </div>
+                                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage)" aria-label="Previous">
+
+                                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage)" aria-label="Previous">
+
+                                                        <span aria-hidden="true">«</span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                </li>
+                        }
+                        else
+                        {
+                                                <li class="page-item">
+
+                                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage - 1)"/>
+
+                                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage - 1)"
+
+                                                        aria-label="Previous">
+                                                        <span aria-hidden="true">«</span>
+                                                        <span class="sr-only">Previous</span>
+                                                    </a>
+                                                </li>
+                        }
+                        @for (int i = 1; i <= ViewBag.numberPage; i++)
+                        {
+                            if (ViewBag.CurrentPage == i)
+                            {
+                                                            <li class="page-item active">
+
+                                                                <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@i">@i</a>
+
+                                                                <a class="page-link" href="/Home/Search?p=@i">@i</a>
+
+                                                            </li>
+                            }
+                            else
+                            {
+                                                            <li class="page-item">
+
+                                                                <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@i">@i</a>
+
+                                                                <a class="page-link" href="/Home/Search?p=@i">@i</a>
+
+                                                            </li>
+                            }
+                        }
+                        @if (ViewBag.CurrentPage == ViewBag.numberPage)
+                        {
+                                                <li class="page-item disabled">
+
+                                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage)" aria-label="Next">
+
+                                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage)" aria-label="Next">
+
+                                                        <span aria-hidden="true">»</span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </li>
+                        }
+                        else
+                        {
+                                                <li class="page-item">
+
+                                                    <a class="page-link" href="/Home/Search?keysearch=@ViewBag.keysearch&p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
+
+                                                    <a class="page-link" href="/Home/Search?p=@(ViewBag.CurrentPage + 1)" aria-label="Next">
+
+                                                        <span aria-hidden="true">»</span>
+                                                        <span class="sr-only">Next</span>
+                                                    </a>
+                                                </li>
+                        }
+                                </ul>
+
+                            </nav>
+                    </div>
         }
     </div>
 </div>
