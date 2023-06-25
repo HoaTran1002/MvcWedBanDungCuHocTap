@@ -11143,11 +11143,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\ACER ASPIRE\\.nuget\\packages\\": {}
+=======
+    "/Users/hoatran/.nuget/packages/": {}
+>>>>>>> 2ff597c (adđ all)
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\MvcWedBanDungCuHocTap.csproj",
       "projectName": "MvcWedBanDungCuHocTap",
       "projectPath": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\MvcWedBanDungCuHocTap.csproj",
@@ -11157,13 +11162,26 @@
       "configFilePaths": [
         "C:\\Users\\ACER ASPIRE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+      "projectUniqueName": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/MvcWedBanDungCuHocTap.csproj",
+      "projectName": "MvcWedBanDungCuHocTap",
+      "projectPath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/MvcWedBanDungCuHocTap.csproj",
+      "packagesPath": "/Users/hoatran/.nuget/packages/",
+      "outputPath": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/hoatran/.nuget/NuGet/NuGet.Config"
+>>>>>>> 2ff597c (adđ all)
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+<<<<<<< HEAD
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+=======
+>>>>>>> 2ff597c (adđ all)
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11234,7 +11252,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+>>>>>>> 2ff597c (adđ all)
       }
     }
   }

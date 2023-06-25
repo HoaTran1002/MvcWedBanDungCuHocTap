@@ -1,3 +1,7 @@
 ﻿<Project>
+<<<<<<< HEAD
   <Import Project="..\buildMultiTargeting\MvcWedBanDungCuHocTap.props" />
+=======
+  <Import Project="../buildMultiTargeting/MvcWedBanDungCuHocTap.props" />
+>>>>>>> 2ff597c (adđ all)
 </Project>

@@ -8,7 +8,11 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MvcWedBanSach.Areas.Admin.Controllers;
 [Area("Admin")]
+<<<<<<< HEAD
 // [Authorize]
+=======
+[Authorize]
+>>>>>>> 2ff597c (adđ all)
 public class SanPhamController : Controller
 {
     private readonly ILogger<SanPhamController> _logger;

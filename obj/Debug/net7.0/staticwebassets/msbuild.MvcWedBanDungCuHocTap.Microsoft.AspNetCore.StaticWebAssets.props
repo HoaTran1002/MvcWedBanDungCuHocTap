@@ -1568,6 +1568,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\bg-decoration-2.png))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\bg-face232631960.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -1584,6 +1585,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\bg-face232631960.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 2ff597c (adđ all)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\bronze-removebg-preview235132857.png))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -1616,6 +1619,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\bronze-removebg-preview235517941.png))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\capnhap232330749.png))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -1632,6 +1636,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\capnhap232330749.png))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 2ff597c (adđ all)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\carousel-1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -1984,6 +1990,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\dashboard\weather-card.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\delete232555989.png))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -2000,6 +2007,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\delete232555989.png))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 2ff597c (adđ all)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\faces\face1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -2976,6 +2985,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\file-icons\64\008-archive.png))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\gold232355642.png))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -3024,6 +3034,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\KASTUDY-removebg-preview232525175.png))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 2ff597c (adđ all)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\KASTUDY231948960.png))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -4272,6 +4284,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\vendor-8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\webkastudy-bg1232452441.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>
@@ -4288,6 +4301,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\webkastudy-bg1232452441.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 2ff597c (adđ all)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\webkastudy-bg2231836147.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MvcWedBanDungCuHocTap</SourceId>

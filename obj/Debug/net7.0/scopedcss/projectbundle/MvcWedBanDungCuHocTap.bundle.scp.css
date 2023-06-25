@@ -2,12 +2,17 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+<<<<<<< HEAD
 a.navbar-brand[b-ds50t2cars] {
+=======
+a.navbar-brand[b-e799wo500v] {
+>>>>>>> 2ff597c (adđ all)
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
+<<<<<<< HEAD
 a[b-ds50t2cars] {
   color: #0077cc;
 }
@@ -16,17 +21,32 @@ a[b-ds50t2cars] {
   height: 150px;
 }
 .btn-primary[b-ds50t2cars] {
+=======
+a[b-e799wo500v] {
+  color: #0077cc;
+}
+.img-logo[b-e799wo500v]{
+  width: 150px;
+  height: 150px;
+}
+.btn-primary[b-e799wo500v] {
+>>>>>>> 2ff597c (adđ all)
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
+<<<<<<< HEAD
 .nav-pills .nav-link.active[b-ds50t2cars], .nav-pills .show > .nav-link[b-ds50t2cars] {
+=======
+.nav-pills .nav-link.active[b-e799wo500v], .nav-pills .show > .nav-link[b-e799wo500v] {
+>>>>>>> 2ff597c (adđ all)
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
+<<<<<<< HEAD
 .border-top[b-ds50t2cars] {
   border-top: 1px solid #e5e5e5;
 }
@@ -39,11 +59,29 @@ a[b-ds50t2cars] {
 }
 
 button.accept-policy[b-ds50t2cars] {
+=======
+.border-top[b-e799wo500v] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-e799wo500v] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-e799wo500v] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-e799wo500v] {
+>>>>>>> 2ff597c (adđ all)
   font-size: 1rem;
   line-height: inherit;
 }
 
+<<<<<<< HEAD
 .footer[b-ds50t2cars] {
+=======
+.footer[b-e799wo500v] {
+>>>>>>> 2ff597c (adđ all)
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -54,12 +92,17 @@ button.accept-policy[b-ds50t2cars] {
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+<<<<<<< HEAD
 a.navbar-brand[b-2ii8nhtzxz] {
+=======
+a.navbar-brand[b-ce9wqnzqfx] {
+>>>>>>> 2ff597c (adđ all)
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
+<<<<<<< HEAD
 a[b-2ii8nhtzxz] {
   color: #0077cc;
 }
@@ -68,17 +111,32 @@ a[b-2ii8nhtzxz] {
   height: 150px;
 }
 .btn-primary[b-2ii8nhtzxz] {
+=======
+a[b-ce9wqnzqfx] {
+  color: #0077cc;
+}
+.img-logo[b-ce9wqnzqfx]{
+  width: 150px;
+  height: 150px;
+}
+.btn-primary[b-ce9wqnzqfx] {
+>>>>>>> 2ff597c (adđ all)
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
+<<<<<<< HEAD
 .nav-pills .nav-link.active[b-2ii8nhtzxz], .nav-pills .show > .nav-link[b-2ii8nhtzxz] {
+=======
+.nav-pills .nav-link.active[b-ce9wqnzqfx], .nav-pills .show > .nav-link[b-ce9wqnzqfx] {
+>>>>>>> 2ff597c (adđ all)
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
+<<<<<<< HEAD
 .border-top[b-2ii8nhtzxz] {
   border-top: 1px solid #e5e5e5;
 }
@@ -91,11 +149,29 @@ a[b-2ii8nhtzxz] {
 }
 
 button.accept-policy[b-2ii8nhtzxz] {
+=======
+.border-top[b-ce9wqnzqfx] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ce9wqnzqfx] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ce9wqnzqfx] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ce9wqnzqfx] {
+>>>>>>> 2ff597c (adđ all)
   font-size: 1rem;
   line-height: inherit;
 }
 
+<<<<<<< HEAD
 .footer[b-2ii8nhtzxz] {
+=======
+.footer[b-ce9wqnzqfx] {
+>>>>>>> 2ff597c (adđ all)
   position: absolute;
   bottom: 0;
   width: 100%;
