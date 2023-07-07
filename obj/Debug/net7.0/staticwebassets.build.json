@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qr4k6o5/xDmR27wuJfAhIruuBdGm6SWvo2DrqvCfBq8=",
+  "Hash": "m3bGmAJYCZFFd9UpLv/IBhcpjAXSHI8y+Ws140yrdzU=",
   "Source": "MvcWedBanDungCuHocTap",
   "BasePath": "_content/MvcWedBanDungCuHocTap",
   "Mode": "Default",
@@ -4250,6 +4250,23 @@
       "OriginalItemSpec": "wwwroot\\img\\product-8.jpg"
     },
     {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\save233351700.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/save233351700.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\save233351700.png"
+    },
+    {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\school-supplies.png",
       "SourceId": "MvcWedBanDungCuHocTap",
       "SourceType": "Discovered",
@@ -4622,6 +4639,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\webkastudy-bg2231836147.jpg"
+    },
+    {
+      "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg3233316589.jpg",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/webkastudy-bg3233316589.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\webkastudy-bg3233316589.jpg"
     },
     {
       "Identity": "C:\\WorkSpace\\_github\\MvcWedBanDungCuHocTap\\wwwroot\\img\\webkastudy-bg9235257071.jpg",

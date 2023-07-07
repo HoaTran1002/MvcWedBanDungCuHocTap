@@ -5,87 +5,62 @@
 
 <div>
     <div class="container">
-        <a href="/Admin/SanPham/ThemSanPham" class="btn border-primary text-white bg-primary mt-4"><i class="bi bi-plus-circle"></i>Thêm Mới</a>
+        <a href="/Admin/SanPham/ThemSanPham" class="btn border-primary text-white bg-primary mt-4"><i
+                class="bi bi-plus-circle"></i>Thêm Mới</a>
         <div class="row">
             <div class="col-12">
                 <table class="table table-image">
                     <thead>
                         <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Hình Ảnh</th>
-                        <th scope="col">Tên Sản Phẩm</th>
-                        <th scope="col">Thực Hiện</th>
-                        <th scope="col">Giá Bán</th>
-                        <th scope="col">Số Lượng</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Hình Ảnh</th>
+                            <th scope="col">Tên Sản Phẩm</th>
+                            <th scope="col">Thực Hiện</th>
+                            <th scope="col">Giá Bán</th>
+                            <th scope="col">Số Lượng</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in ViewBag.ListSp)
                         {
                             <tr>
-
                                 <th scope="row">@item.SanPham.Id</th>
                                 <td class="w-25">
                                     <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
                                 </td>
                                 <td>@item.SanPham.TenSP</td>
                                 <td>
-                                    <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
+                                    <a class="icon-link-hover" href="#" onclick="submitForm('@item.SanPham.Id')"
+                                        style="font-size: 20px; margin:10px;">
                                         <i class="text-danger bi bi-trash"></i>
                                     </a>
-                                    <a class="icon-link-hover" href="/Admin/SanPham/EditSP/@item.SanPham.Id" style="font-size: 20px; margin:10px;">
+                                    <a class="icon-link-hover" href="/Admin/SanPham/EditSP/@item.SanPham.Id"
+                                        style="font-size: 20px; margin:10px;">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
-
                                 </td>
                                 <td>@item.SanPham.GiaBan</td>
                                 <td>@item.SanPham.SoLuongNhap</td>
-                                <form id="myForm" method="POST" action="XoaSanPham">
-                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                </form>  
-                                <form id="myFormEdit" method="Get" action="SuaSanPham">
-                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                </form>  
-                                <form id="myFormDetail" method="POST" action="XemChiTiet">
-                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                </form>  
+                                <form id="myForm_@item.SanPham.Id" method="POST" action="XoaSanPham/@item.SanPham.Id">
+                                    <input id="IdInput_@item.SanPham.Id" name="Id" value="@item.SanPham.Id" type="hidden">
+                                </form>
                             </tr>
                         }
                     </tbody>
-                </table> 
+                </table>
             </div>
         </div>
-    </div>    
+    </div>
     <script>
-    function submitForm() {
+    function submitForm(id) {
         // Lấy giá trị của Id từ phần tử input ẩn
-        var id = document.getElementById('IdInput').value;
+        var idInput = document.getElementById('IdInput_' + id);
 
         // Gán giá trị của Id vào input trong form
-        document.getElementById('IdInput').value = id;
+        idInput.value = id;
 
         // Submit form
-        document.getElementById('myForm').submit();
-    }
-    function submitFormEdit() {
-        // Lấy giá trị của Id từ phần tử input ẩn
-        var id = document.getElementById('IdInput').value;
-
-        // Gán giá trị của Id vào input trong form
-        document.getElementById('IdInput').value = id;
-
-        // Submit form
-        document.getElementById('myFormEdit').submit();
-    }
-    function submitFormDetail() {
-        // Lấy giá trị của Id từ phần tử input ẩn
-        var id = document.getElementById('IdInput').value;
-
-        // Gán giá trị của Id vào input trong form
-        document.getElementById('IdInput').value = id;
-
-        // Submit form
-        document.getElementById('myFormDetail').submit();
+        document.getElementById('myForm_' + id).submit();
     }
 </script>
 </div>
