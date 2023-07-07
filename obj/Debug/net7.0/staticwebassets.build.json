@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DpE6/1yQkyEZcpENImCPDb41sLN3tFEypZk06UAkn88=",
+  "Hash": "eQ7OcwhiBCV66R7nkjeskpCxFhe11XY4PwD2swNV63A=",
   "Source": "MvcWedBanDungCuHocTap",
   "BasePath": "_content/MvcWedBanDungCuHocTap",
   "Mode": "Default",
@@ -3262,6 +3262,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/file-icons/64/008-archive.png"
+    },
+    {
+      "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/gold231311345.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/gold231311345.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/gold231311345.png"
+    },
+    {
+      "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/gold232225698.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/gold232225698.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/gold232225698.png"
     },
     {
       "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/gold232355642.png",

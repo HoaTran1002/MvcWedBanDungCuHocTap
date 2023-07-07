@@ -314,6 +314,8 @@ public class HomeController : Controller
                             join b in _context.HinhAnhs on a.Id equals b.IdSP
                             select new { SanPham = a, HinhAnh = b })
                         .Where(p => p.SanPham.TenSP.Contains(keysearch))
+                        // .Skip(productInPage).Take(ItemInPage)
+                        // Xóa dòng này 
                         .ToList().Count;
         var TotlaProducts = products.Count;
         int TotalPage = (int)Math.Ceiling((double)productsItem / ItemInPage);

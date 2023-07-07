@@ -157,7 +157,7 @@ public class SanPhamController : Controller
 
 
             // //xoá hình ảnh sản phẩm
-            // await _context.SaveChangesAsync();
+            // await _context.SaveChangesAsync();2
             // return RedirectToAction("DanhSachSanPham", "SanPham");
         }
         catch (System.Exception)
@@ -232,39 +232,4 @@ public class SanPhamController : Controller
         return BadRequest("Lỗi");
     }
 
-
-    [HttpGet]
-    public async Task<IActionResult> Delete(int id)
-    {
-        var ChiTietSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(c => c.IdSP == id);
-        var SanPham = await _context.SanPhams.FindAsync(id);
-        ViewBag.ListLop = await _context.Lops.ToListAsync();
-        ViewBag.ListThuongHieu = await _context.ThuongHieus.ToListAsync();
-        ViewBag.ListTheLoai = await _context.TheLoais.ToListAsync();
-        ViewBag.danhMucSanPhams = await _context.DanhMucSanPhams.ToListAsync();
-        if (ChiTietSP == null || SanPham == null)
-        {
-            return NotFound();
-        }
-
-        ViewBag.ChiTietSanPham = ChiTietSP;
-        return View(SanPham);
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> DeleteConfirmed(int id)
-    {
-        var sanpham = await _context.SanPhams.FindAsync(id);
-        var ChiTietSP = await _context.ChiTietSanPhams.FirstOrDefaultAsync(c => c.IdSP == id);
-        if (sanpham == null)
-        {
-            return NotFound();
-        }
-
-        _context.SanPhams.Remove(sanpham);
-        _context.ChiTietSanPhams.Remove(ChiTietSP);
-        await _context.SaveChangesAsync();
-
-        return RedirectToAction("DanhSachSanPham", "SanPham");
-    }
 }
