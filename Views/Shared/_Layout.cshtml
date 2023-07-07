@@ -55,7 +55,9 @@
                 </a>
             </div>
             <div class="col-lg-6 col-6 text-left">
-                <form action="/Home/Search" class="form-style" method="get">
+
+                <form action="/Home/Search?p=1" class="form-style" method="post">
+
                     <div class="input-group">
                         <input type="text" class="form-control" name="keysearch" placeholder="Tìm kiếm sản phẩm">
                         <div class="input-group-append">
@@ -88,12 +90,12 @@
                         <div class="nav-item">
                             @foreach (var item in danhMucSanPhams)
                             {
-                                <a href="/Home/ListProductType?id=@item.Id&p=1" class="nav-link">
+                                    <a href="/Home/ListProductType?id=@item.Id&p=1" class="nav-link">
                                     @item.TenDM
-                                </a>
+                                    </a>
                             }
                         </div>
-                       
+
                     </div>
                 </nav>
             </div>
@@ -115,15 +117,17 @@
                         </div>
                         @if (!string.IsNullOrEmpty(User.Identity.Name))
                         {
-                            <div class="navbar-nav ml-auto py-0">
-                                    <a asp-controller="UserAuthentication" asp-action="ChangePassword" class="nav-item nav-link">Đổi mật khẩu</a>
-                                    <a asp-controller="UserAuthentication" asp-action="Logout" class="nav-item nav-link">Đăng xuất</a>
-                                </div>
-                        }else{
                                 <div class="navbar-nav ml-auto py-0">
-                                    <a asp-controller="UserAuthentication" asp-action="Login" class="nav-item nav-link">Đăng nhập </a>
-                                    <a asp-controller="UserAuthentication" asp-action="Registration" class="nav-item nav-link">Đăng ký</a>
-                                </div>
+                                        <a asp-controller="UserAuthentication" asp-action="ChangePassword" class="nav-item nav-link">Đổi mật khẩu</a>
+                                        <a asp-controller="UserAuthentication" asp-action="Logout" class="nav-item nav-link">Đăng xuất</a>
+                                    </div>
+                        }
+                        else
+                        {
+                                    <div class="navbar-nav ml-auto py-0">
+                                        <a asp-controller="UserAuthentication" asp-action="Login" class="nav-item nav-link">Đăng nhập </a>
+                                        <a asp-controller="UserAuthentication" asp-action="Registration" class="nav-item nav-link">Đăng ký</a>
+                                    </div>
                         }
                     </div>
                 </nav>
