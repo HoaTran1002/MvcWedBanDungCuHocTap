@@ -143,21 +143,22 @@ public class SanPhamController : Controller
 
             //xoá sản phẩm 
             var SanPhamRemove = _context.SanPhams.SingleOrDefault(sp => sp.Id == Id);
-            if (SanPhamRemove != null)
-            {
-                _context.SanPhams.Remove(SanPhamRemove);
-                await _context.SaveChangesAsync();
-            }
-            //xoá hình ảnh
-            HinhAnh anhD = _context.HinhAnhs.First(ha => ha.IdSP == Id);
-            _context.HinhAnhs.Where(ha => ha.IdSP == Id).ExecuteDelete();
-            await _context.SaveChangesAsync();
+            Console.WriteLine("sp============>>>>>>:" + Id);
+            // if (SanPhamRemove != null)
+            // {
+            //     _context.SanPhams.Remove(SanPhamRemove);
+            //     await _context.SaveChangesAsync();
+            // }
+            // //xoá hình ảnh
+            // HinhAnh anhD = _context.HinhAnhs.First(ha => ha.IdSP == Id);
+            // _context.HinhAnhs.Where(ha => ha.IdSP == Id).ExecuteDelete();
+            // await _context.SaveChangesAsync();
 
 
 
-            //xoá hình ảnh sản phẩm
-            await _context.SaveChangesAsync();
-            return RedirectToAction("DanhSachSanPham", "SanPham");
+            // //xoá hình ảnh sản phẩm
+            // await _context.SaveChangesAsync();
+            // return RedirectToAction("DanhSachSanPham", "SanPham");
         }
         catch (System.Exception)
         {

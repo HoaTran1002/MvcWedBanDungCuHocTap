@@ -397,6 +397,10 @@
       "PackagePath": "staticwebassets/img/auth/register-bg.jpg"
     },
     {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/banner-web-hufi-01234408573.jpeg",
+      "PackagePath": "staticwebassets/img/banner-web-hufi-01234408573.jpeg"
+    },
+    {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/bg-decoration-1.png",
       "PackagePath": "staticwebassets/img/bg-decoration-1.png"
     },
@@ -469,6 +473,10 @@
       "PackagePath": "staticwebassets/img/cd_sgk_tv_tap_2_lop_4232520288230500567.jpg"
     },
     {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry235108291.jpeg",
+      "PackagePath": "staticwebassets/img/cherry235108291.jpeg"
+    },
+    {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/commons-collections4-4.1231423843.jar",
       "PackagePath": "staticwebassets/img/commons-collections4-4.1231423843.jar"
     },
@@ -511,6 +519,10 @@
     {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/delete232555989.png",
       "PackagePath": "staticwebassets/img/delete232555989.png"
+    },
+    {
+      "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/eyse234904380.png",
+      "PackagePath": "staticwebassets/img/eyse234904380.png"
     },
     {
       "Id": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/faces/face1.jpg",

@@ -49,17 +49,25 @@ public class HomeController : Controller
 
 
 
-        // var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-        // ViewBag.NumberCart= cartProducts-1;
-
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
-        // ViewBag.NumberCart = cartProducts - 1;
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
+
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
+
+
 
         return View();
     }
@@ -156,7 +164,7 @@ public class HomeController : Controller
     public async Task<IActionResult> DeleteCart(int? SanPhamId)
     {
 
-        Console.WriteLine("iddd sppp===>>" + SanPhamId);
+
         // Lấy thông tin người dùng hiện tại
         var currentUser = await _userManager.GetUserAsync(User);
 
@@ -239,7 +247,22 @@ public class HomeController : Controller
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
 
         var currentUser = await _userManager.GetUserAsync(User);
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
 
         return View();
     }
@@ -248,7 +271,22 @@ public class HomeController : Controller
         ViewBag.ListdanhMucSanPhams = danhMucSanPhams;
 
         var currentUser = await _userManager.GetUserAsync(User);
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
 
         return View();
     }
@@ -290,11 +328,22 @@ public class HomeController : Controller
 
 
         var currentUser = await _userManager.GetUserAsync(User);
-        // var cartProducts = _context.GioHangs
-        //     .Where(giohang => giohang.UserId == currentUser.Id)
-        //     .ToList().Count;
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
-        // ViewBag.NumberCart= cartProducts-1;
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
         return View();
     }
 
@@ -341,7 +390,22 @@ public class HomeController : Controller
 
 
         var currentUser = await _userManager.GetUserAsync(User);
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
 
         return View();
     }
@@ -370,7 +434,22 @@ public class HomeController : Controller
 
         var currentUser = await _userManager.GetUserAsync(User);
 
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
         return View();
     }
     public async Task<IActionResult> Shop()
@@ -385,7 +464,22 @@ public class HomeController : Controller
 
         var currentUser = await _userManager.GetUserAsync(User);
 
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
         return View();
     }
 
@@ -400,7 +494,22 @@ public class HomeController : Controller
             .ToList();
         ViewBag.ListSp = products;
         var currentUser = await _userManager.GetUserAsync(User);
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
 
         return View("Shop");
     }
@@ -431,7 +540,22 @@ public class HomeController : Controller
 
         var currentUser = await _userManager.GetUserAsync(User);
 
+        if (currentUser == null)
+        {
+            ViewBag.NumberCart = 0;
+        }
+        else
+        {
 
+            var cartProducts = _context.GioHangs
+                .Where(giohang => giohang.UserId == currentUser.Id)
+                .ToList().Count;
+            if (cartProducts == 0)
+            {
+                cartProducts = 1;
+            }
+            ViewBag.NumberCart = cartProducts - 1;
+        }
         return View("Shop");
     }
     [HttpPost]
@@ -472,7 +596,15 @@ public class HomeController : Controller
 
         ViewBag.ListSp = products;
         var currentUser = await _userManager.GetUserAsync(User);
+        var cartProducts = _context.GioHangs
+                    .Where(giohang => giohang.UserId == currentUser.Id)
+                    .ToList().Count;
 
+        if (cartProducts == 0)
+        {
+            cartProducts = 1;
+        }
+        ViewBag.NumberCart = cartProducts - 1;
 
         return View("Shop");
     }

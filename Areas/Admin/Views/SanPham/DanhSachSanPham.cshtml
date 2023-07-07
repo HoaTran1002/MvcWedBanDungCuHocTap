@@ -22,34 +22,38 @@
                     <tbody>
                         @foreach (var item in ViewBag.ListSp)
                         {
-                            <tr>
+                                <tr>
 
-                                <th scope="row">@item.SanPham.Id</th>
-                                <td class="w-25">
-                                    <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
-                                </td>
-                                <td>@item.SanPham.TenSP</td>
-                                <td>
-                                    <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
-                                        <i class="text-danger bi bi-trash"></i>
-                                    </a>
-                                    <a class="icon-link-hover" href="/Admin/SanPham/EditSP/@item.SanPham.Id" style="font-size: 20px; margin:10px;">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </a>
+                                    <th scope="row">@item.SanPham.Id</th>
+                                    <td class="w-25">
+                                        <img src="~/@item.HinhAnh.HinhAnhSP" class="img-fluid img-thumbnail" alt="Hình ảnh">
+                                    </td>
+                                    <td>@item.SanPham.TenSP</td>
+                                    <td>
+                                        
+                                       <a class="icon-link-hover" href="#" onclick="submitForm()" style="font-size: 20px; margin:10px;">
+                                        </a>
+                                        <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                    
 
-                                </td>
-                                <td>@item.SanPham.GiaBan</td>
-                                <td>@item.SanPham.SoLuongNhap</td>
-                                <form id="myForm" method="POST" action="XoaSanPham">
-                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                </form>  
-                                <form id="myFormEdit" method="Get" action="SuaSanPham">
-                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                </form>  
-                                <form id="myFormDetail" method="POST" action="XemChiTiet">
-                                    <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
-                                </form>  
-                            </tr>
+                                        <a class="icon-link-hover" href="/Admin/SanPham/EditSP/@item.SanPham.Id" style="font-size: 20px; margin:10px;">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+
+                                    </td>
+                                    <td>@item.SanPham.GiaBan</td>
+                                    <td>@item.SanPham.SoLuongNhap</td>
+                                    <h1>@item.SanPham.Id</h1>
+                                    <form id="myFormEdit" method="Get" action="SuaSanPham">
+                                        <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                    </form>  
+                                    @* <form id="myFormEdit" method="Get" action="SuaSanPham">
+                                        <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                    </form>  
+                                    <form id="myFormDetail" method="POST" action="XemChiTiet">
+                                        <input id="IdInput" name="Id" value= @item.SanPham.Id type="hidden">
+                                    </form>   *@
+                                </tr>
                         }
                     </tbody>
                 </table> 
@@ -67,7 +71,7 @@
         // Submit form
         document.getElementById('myForm').submit();
     }
-    function submitFormEdit() {
+    @* function submitFormEdit() {
         // Lấy giá trị của Id từ phần tử input ẩn
         var id = document.getElementById('IdInput').value;
 
@@ -86,6 +90,6 @@
 
         // Submit form
         document.getElementById('myFormDetail').submit();
-    }
+    } *@
 </script>
 </div>

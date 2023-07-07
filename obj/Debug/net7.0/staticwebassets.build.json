@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3QgsHCasciKYjkJfZtGrPvTPKTz79iKov/Vf7gxxKvs=",
+  "Hash": "DpE6/1yQkyEZcpENImCPDb41sLN3tFEypZk06UAkn88=",
   "Source": "MvcWedBanDungCuHocTap",
   "BasePath": "_content/MvcWedBanDungCuHocTap",
   "Mode": "Default",
@@ -1683,6 +1683,23 @@
       "OriginalItemSpec": "wwwroot/img/auth/register-bg.jpg"
     },
     {
+      "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/banner-web-hufi-01234408573.jpeg",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/banner-web-hufi-01234408573.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/banner-web-hufi-01234408573.jpeg"
+    },
+    {
       "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/bg-decoration-1.png",
       "SourceId": "MvcWedBanDungCuHocTap",
       "SourceType": "Discovered",
@@ -1989,6 +2006,23 @@
       "OriginalItemSpec": "wwwroot/img/cd_sgk_tv_tap_2_lop_4232520288230500567.jpg"
     },
     {
+      "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/cherry235108291.jpeg",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/cherry235108291.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/cherry235108291.jpeg"
+    },
+    {
       "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/commons-collections4-4.1231423843.jar",
       "SourceId": "MvcWedBanDungCuHocTap",
       "SourceType": "Discovered",
@@ -2174,6 +2208,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/delete232555989.png"
+    },
+    {
+      "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/eyse234904380.png",
+      "SourceId": "MvcWedBanDungCuHocTap",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/",
+      "BasePath": "_content/MvcWedBanDungCuHocTap",
+      "RelativePath": "img/eyse234904380.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/eyse234904380.png"
     },
     {
       "Identity": "/Users/hoatran/Documents/study/MvcWedBanDungCuHocTap/wwwroot/img/faces/face1.jpg",
